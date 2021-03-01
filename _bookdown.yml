@@ -1,6 +1,6 @@
 book_filename: "prefresher"
 repo: https://github.com/IQSS/prefresher/
-output_dir: _book
+output_dir: docs
 delete_merged_file: true
 language:
   ui:
