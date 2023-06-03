@@ -4,24 +4,24 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Optimization | Math Prefresher for Political Scientists</title>
-  <meta name="description" content="Text for Harvard Department of Government Math Prefresher" />
+  <title>Chapter 4 Optimization | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</title>
+  <meta name="description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Optimization | Math Prefresher for Political Scientists" />
+  <meta property="og:title" content="Chapter 4 Optimization | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="./images/logo.png" />
-  <meta property="og:description" content="Text for Harvard Department of Government Math Prefresher" />
-  <meta name="github-repo" content="IQSS/prefresher" />
+  <meta property="og:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
+  <meta name="github-repo" content="Rusty Math 3" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Optimization | Math Prefresher for Political Scientists" />
+  <meta name="twitter:title" content="Chapter 4 Optimization | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   
-  <meta name="twitter:description" content="Text for Harvard Department of Government Math Prefresher" />
+  <meta name="twitter:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="twitter:image" content="./images/logo.png" />
 
-<meta name="author" content="" />
+<meta name="author" content="Nguyen Ngoc Anh" />
 
 
 
@@ -150,7 +150,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#limits"><i class="fa fa-check"></i>Limits</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#calculus"><i class="fa fa-check"></i>Calculus</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#optimization"><i class="fa fa-check"></i>Optimization</a></li>
-<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a></li>
+<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#graphics"><i class="fa fa-check"></i><b>0.0.1</b> Graphics</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>I Math</b></span></li>
 <li class="chapter" data-level="1" data-path="functions-and-operations.html"><a href="functions-and-operations.html"><i class="fa fa-check"></i><b>1</b> Functions and Operations</a><ul>
@@ -214,6 +216,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="optim.html"><a href="optim.html#inequality-constraints"><i class="fa fa-check"></i><b>4.6</b> Inequality Constraints</a></li>
 <li class="chapter" data-level="4.7" data-path="optim.html"><a href="optim.html#kuhn-tucker-conditions"><i class="fa fa-check"></i><b>4.7</b> Kuhn-Tucker Conditions</a></li>
 <li class="chapter" data-level="4.8" data-path="optim.html"><a href="optim.html#applications-of-quadratic-forms"><i class="fa fa-check"></i><b>4.8</b> Applications of Quadratic Forms</a></li>
+<li class="chapter" data-level="4.9" data-path="optim.html"><a href="optim.html#numerics-numerical-computation"><i class="fa fa-check"></i><b>4.9</b> Numerics / Numerical computation</a><ul>
+<li class="chapter" data-level="4.9.1" data-path="optim.html"><a href="optim.html#rounding-error"><i class="fa fa-check"></i><b>4.9.1</b> Rounding error</a></li>
+<li class="chapter" data-level="4.9.2" data-path="optim.html"><a href="optim.html#computing-exp-x-avoiding-computing-large---large"><i class="fa fa-check"></i><b>4.9.2</b> 1.2 Computing exp (x): avoiding computing large - large</a></li>
+<li class="chapter" data-level="4.9.3" data-path="optim.html"><a href="optim.html#univariate-optimization-for-mle"><i class="fa fa-check"></i><b>4.9.3</b> Univariate Optimization for MLE</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="probability-theory.html"><a href="probability-theory.html"><i class="fa fa-check"></i><b>5</b> Probability Theory</a><ul>
 <li class="chapter" data-level="5.1" data-path="probability-theory.html"><a href="probability-theory.html#counting-rules"><i class="fa fa-check"></i><b>5.1</b> Counting rules</a></li>
@@ -491,7 +498,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math Prefresher for Political Scientists</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</a>
           </h1>
         </div>
 
@@ -559,15 +566,15 @@ W_i &amp;= \left(1 - \frac{g}{E(y)}\right)y_i + U(g)\\
 i.e. a maximum, minimum, or saddle point</li>
 </ol>
 <p>So for example, <span class="math inline">\(f(x) = x^2 + 2\)</span> and <span class="math inline">\(f^\prime(x) = 2x\)</span></p>
-<div class="figure"><span id="fig:unnamed-chunk-43"></span>
-<img src="prefresher_files/figure-html/unnamed-chunk-43-1.png" alt="Maxima and Minima" width="672" />
+<div class="figure"><span id="fig:unnamed-chunk-50"></span>
+<img src="prefresher_files/figure-html/unnamed-chunk-50-1.png" alt="Maxima and Minima" width="672" />
 <p class="caption">
 Figure 4.1: Maxima and Minima
 </p>
 </div>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercise 4.1  (Plotting a mazimum and minimum)  </strong></span>Plot <span class="math inline">\(f(x)=x^3+ x^2 + 2\)</span>, plot its derivative, and identifiy where the derivative is zero. Is there a maximum or minimum?</p>
+<p><span id="exr:unnamed-chunk-51" class="exercise"><strong>Exercise 4.1  (Plotting a mazimum and minimum)  </strong></span>Plot <span class="math inline">\(f(x)=x^3+ x^2 + 2\)</span>, plot its derivative, and identifiy where the derivative is zero. Is there a maximum or minimum?</p>
 </div>
 
 <p>The second derivative <span class="math inline">\(f&#39;&#39;(x)\)</span> identifies whether the function <span class="math inline">\(f(x)\)</span> at the point <span class="math inline">\(x\)</span> is</p>
@@ -597,7 +604,7 @@ Figure 4.1: Maxima and Minima
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-46" class="example"><strong>Example 4.1  (Maxima and Minima by drawing)  </strong></span>
+<p><span id="exm:unnamed-chunk-53" class="example"><strong>Example 4.1  (Maxima and Minima by drawing)  </strong></span>
 Find any critical points and identify whether they are a max, min, or saddle point:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)=x^2+2\)</span></li>
@@ -612,14 +619,14 @@ Find any critical points and identify whether they are a max, min, or saddle poi
 <p>Concavity helps identify the curvature of a function, <span class="math inline">\(f(x)\)</span>, in 2 dimensional space.</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-47" class="definition"><strong>Definition 4.1  (Concave Function)  </strong></span>A function <span class="math inline">\(f\)</span> is strictly concave over the set S  <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) &gt; af(x_1) + (1-a)f(x_2)\]</span>
+<span id="def:unnamed-chunk-54" class="definition"><strong>Definition 4.1  (Concave Function)  </strong></span>A function <span class="math inline">\(f\)</span> is strictly concave over the set S  <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) &gt; af(x_1) + (1-a)f(x_2)\]</span>
  line connecting two points on a concave function will lie  the function.
 </div>
 
-<p><img src="prefresher_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-49" class="definition"><strong>Definition 4.2  (Convex Function)  </strong></span>Convex: A function f is strictly convex over the set S  <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) &lt; af(x_1) + (1-a)f(x_2)\]</span></p>
+<p><span id="def:unnamed-chunk-56" class="definition"><strong>Definition 4.2  (Convex Function)  </strong></span>Convex: A function f is strictly convex over the set S  <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) &lt; af(x_1) + (1-a)f(x_2)\]</span></p>
 Any line connecting two points on a convex function will lie above the function.
 </div>
 
@@ -627,14 +634,14 @@ Any line connecting two points on a convex function will lie above the function.
 <p>Sometimes, concavity and convexity are strict of a requirement. For most purposes of getting solutions, what we call quasi-concavity is enough.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-50" class="definition"><strong>Definition 4.3  (Quasiconcave Function)  </strong></span>A function f is quasiconcave over the set S if <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) \ge \min(f(x_1),f(x_2))\]</span></p>
+<p><span id="def:unnamed-chunk-57" class="definition"><strong>Definition 4.3  (Quasiconcave Function)  </strong></span>A function f is quasiconcave over the set S if <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) \ge \min(f(x_1),f(x_2))\]</span></p>
 <p>No matter what two points you select, the  valued point will always be an end point.</p>
 </div>
 
 
 
 <div class="definition">
-<span id="def:unnamed-chunk-51" class="definition"><strong>Definition 4.4  (Quasiconvex)  </strong></span>A function f is quasiconvex over the set <span class="math inline">\(S\)</span> if <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) \le \max(f(x_1),f(x_2))\]</span>
+<span id="def:unnamed-chunk-58" class="definition"><strong>Definition 4.4  (Quasiconvex)  </strong></span>A function f is quasiconvex over the set <span class="math inline">\(S\)</span> if <span class="math inline">\(\forall x_1,x_2 \in S\)</span> and <span class="math inline">\(\forall a \in (0,1)\)</span>, <span class="math display">\[f(ax_1 + (1-a)x_2) \le \max(f(x_1),f(x_2))\]</span>
 No matter what two points you select, the  valued point will always be an end point.
 </div>
 
@@ -699,7 +706,7 @@ zero, or sometimes both over all <span class="math inline">\(\mathbf{x}\ne 0\)</
 <p>In a derivative, we only took the derivative with respect to one variable at a time. When we take the derivative separately with respect to all variables in the elements of <span class="math inline">\(\mathbf{x}\)</span> and then express the result as a vector, we use the term Gradient and Hessian.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-52" class="definition"><strong>Definition 4.5  (Gradient)  </strong></span>
+<p><span id="def:unnamed-chunk-59" class="definition"><strong>Definition 4.5  (Gradient)  </strong></span>
 Given a function <span class="math inline">\(f(\textbf{x})\)</span> in <span class="math inline">\(n\)</span> variables, the gradient <span class="math inline">\(\nabla f(\mathbf{x})\)</span> (the greek letter nabla ) is a column vector, where the <span class="math inline">\(i\)</span>th element is the partial derivative of <span class="math inline">\(f(\textbf{x})\)</span> with respect to <span class="math inline">\(x_i\)</span>:</p>
 <p><span class="math display">\[\nabla f(\mathbf{x}) = \begin{pmatrix}
 \frac{\partial f(\mathbf{x})}{\partial x_1}\\ \frac{\partial f(\mathbf{x})}{\partial x_2}\\
@@ -709,13 +716,13 @@ Given a function <span class="math inline">\(f(\textbf{x})\)</span> in <span cla
 <p>Before we know whether a point is a maxima or minima, if it meets the FOC it is a “Critical Point”.</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-53" class="definition"><strong>Definition 4.6  (Critical Point)  </strong></span>
+<span id="def:unnamed-chunk-60" class="definition"><strong>Definition 4.6  (Critical Point)  </strong></span>
 <span class="math inline">\(\mathbf{x}^*\)</span> is a critical point if and only if <span class="math inline">\(\nabla f(\mathbf{x}^*)=0\)</span>. If the partial derivative of f(x) with respect to <span class="math inline">\(x^*\)</span> is 0, then <span class="math inline">\(\mathbf{x}^*\)</span> is a critical point. To solve for <span class="math inline">\(\mathbf{x}^*\)</span>, find the gradient, set each element equal to 0, and solve the system of equations. <span class="math display">\[\mathbf{x}^* = \begin{pmatrix} x_1^*\\x_2^*\\ \vdots \\ x_n^*\end{pmatrix}\]</span>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-54" class="example"><strong>Example 4.2  </strong></span>
+<p><span id="exm:unnamed-chunk-61" class="example"><strong>Example 4.2  </strong></span>
 Example: Given a function <span class="math inline">\(f(\mathbf{x})=(x_1-1)^2+x_2^2+1\)</span>, find the (1) Gradient and (2) Critical point of <span class="math inline">\(f(\mathbf{x})\)</span>.</p>
 </div>
 
@@ -742,7 +749,7 @@ Example: Given a function <span class="math inline">\(f(\mathbf{x})=(x_1-1)^2+x_
 <p>When we found a critical point for a function of one variable, we used the second derivative as a indicator of the curvature at the point in order to determine whether the point was a min, max, or saddle (second derivative test of concavity). For functions of <span class="math inline">\(n\)</span> variables, we use <em>second order partial derivatives</em> as an indicator of curvature.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-56" class="definition"><strong>Definition 4.7  (Hessian)  </strong></span>
+<p><span id="def:unnamed-chunk-63" class="definition"><strong>Definition 4.7  (Hessian)  </strong></span>
 Given a function <span class="math inline">\(f(\mathbf{x})\)</span> in <span class="math inline">\(n\)</span> variables, the hessian <span class="math inline">\(\mathbf{H(x)}\)</span> is
 an <span class="math inline">\(n\times n\)</span> matrix, where the <span class="math inline">\((i,j)\)</span>th element is the second order
 partial derivative of <span class="math inline">\(f(\mathbf{x})\)</span> with respect to <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>:</p>
@@ -769,7 +776,7 @@ partial derivative of <span class="math inline">\(f(\mathbf{x})\)</span> with re
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-57" class="example"><strong>Example 4.3  (Max and min with two dimensions)  </strong></span>
+<p><span id="exm:unnamed-chunk-64" class="example"><strong>Example 4.3  (Max and min with two dimensions)  </strong></span>
 We found that the only critical point of
 <span class="math inline">\(f(\mathbf{x})=(x_1-1)^2+x_2^2+1\)</span> is at <span class="math inline">\(\mathbf{x}^*=(1,0)\)</span>. Is it a min, max, or
 saddle point?</p>
@@ -822,7 +829,7 @@ is globally concave. So <span class="math inline">\(x=0\)</span> is a global min
 global max of <span class="math inline">\(f_2(x)\)</span>.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercise 4.2  </strong></span>Given <span class="math inline">\(f(\mathbf{x})=x_1^3-x_2^3+9x_1x_2\)</span>, find any maxima or minima.
+<span id="exr:unnamed-chunk-66" class="exercise"><strong>Exercise 4.2  </strong></span>Given <span class="math inline">\(f(\mathbf{x})=x_1^3-x_2^3+9x_1x_2\)</span>, find any maxima or minima.
 </div>
 
 
@@ -875,7 +882,7 @@ Here we add the lagrangian term <em>and</em> we subtract the constraining functi
 <p><strong>Second-order Conditions and Unconstrained Optimization:</strong> There may be more than one critical point, i.e. we need to verify that the critical point we find is a maximum/minimum. Similar to unconstrained optimization, we can do this by checking the second-order conditions.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-60" class="example"><strong>Example 4.4  (Constrained optimization with two goods and a budget constraint)  </strong></span>
+<span id="exm:unnamed-chunk-67" class="example"><strong>Example 4.4  (Constrained optimization with two goods and a budget constraint)  </strong></span>
 Find the constrained optimization of
 <span class="math display">\[\max_{x_1,x_2} f(x) = -(x_1^2 + 2x_2^2) \text{ s.t. } x_1 + x_2 = 4\]</span>
 </div>
@@ -960,7 +967,7 @@ Looking at the values of <span class="math inline">\(f(x_1,x_2)\)</span> at the 
 </ol>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-62" class="exercise"><strong>Exercise 4.3  </strong></span>Example: Find the critical points for the following constrained optimization:
+<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercise 4.3  </strong></span>Example: Find the critical points for the following constrained optimization:
 <span class="math display">\[\max_{x_1,x_2} f(x) = -(x_1^2 + 2x_2^2) \text{ s.t. } 
 \begin{array}{l}
 x_1 + x_2 \le 4\\
@@ -1034,7 +1041,7 @@ x_1 \geq 0 &amp; \dots &amp; x_n \geq 0\\
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-63" class="example"><strong>Example 4.5  (Kuhn-Tucker with two variables)  </strong></span>Solve the following optimization problem with inequality constraints
+<p><span id="exm:unnamed-chunk-70" class="example"><strong>Example 4.5  (Kuhn-Tucker with two variables)  </strong></span>Solve the following optimization problem with inequality constraints
 <span class="math display">\[\max_{x_1,x_2} f(x) = -(x_1^2 + 2x_2^2)\]</span></p>
 <p><span class="math display">\[\begin{align*}
 \text{ s.t. } 
@@ -1076,7 +1083,7 @@ Three of the critical points violate the requirement that <span class="math inli
 </ol>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-64" class="exercise"><strong>Exercise 4.4  (Kuhn-Tucker with logs)  </strong></span>Solve the constrained optimization problem,</p>
+<p><span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercise 4.4  (Kuhn-Tucker with logs)  </strong></span>Solve the constrained optimization problem,</p>
 <span class="math display">\[\max_{x_1,x_2} f(x) = \frac{1}{3}\log (x_1 + 1) + \frac{2}{3}\log (x_2 + 1) \text{ s.t. }  
 \begin{array}{l}
 x_1 + 2x_2 \leq 4\\
@@ -1102,7 +1109,739 @@ and for small <span class="math inline">\(\bf h\)</span>, <span class="math inli
 \bf h \]</span></li>
 <li>The Righthand side here is a quadratic form and we can determine the definiteness of <span class="math inline">\(\bf H(x^*)\)</span>.</li>
 </ol>
+</div>
+<div id="numerics-numerical-computation" class="section level2">
+<h2><span class="header-section-number">4.9</span> Numerics / Numerical computation</h2>
+<p><a href="http://portal.stats.ox.ac.uk/userdata/ruth/APTS2013/Rdemo5.r" class="uri">http://portal.stats.ox.ac.uk/userdata/ruth/APTS2013/Rdemo5.r</a></p>
+<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="optim.html#cb546-1"></a><span class="co">###################################################################</span></span>
+<span id="cb546-2"><a href="optim.html#cb546-2"></a><span class="co">## R Programming Session 5</span></span>
+<span id="cb546-3"><a href="optim.html#cb546-3"></a><span class="co">##################################################################</span></span>
+<span id="cb546-4"><a href="optim.html#cb546-4"></a><span class="co">##optimize example from help page</span></span>
+<span id="cb546-5"><a href="optim.html#cb546-5"></a>f &lt;-<span class="st"> </span><span class="cf">function</span> (x,a) (x<span class="op">-</span>a)<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb546-6"><a href="optim.html#cb546-6"></a>xmin &lt;-<span class="st"> </span><span class="kw">optimize</span>(f, <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb546-7"><a href="optim.html#cb546-7"></a>                 <span class="dt">tol =</span> <span class="fl">0.0001</span>,</span>
+<span id="cb546-8"><a href="optim.html#cb546-8"></a>                 <span class="dt">a =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb546-9"><a href="optim.html#cb546-9"></a>xmin</span></code></pre></div>
+<pre><code>## $minimum
+## [1] 0.3333333
+## 
+## $objective
+## [1] 0</code></pre>
+<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb548-1"><a href="optim.html#cb548-1"></a><span class="co">## optim example from help page</span></span>
+<span id="cb548-2"><a href="optim.html#cb548-2"></a><span class="co">## Rosenbrock Banana function</span></span>
+<span id="cb548-3"><a href="optim.html#cb548-3"></a></span>
+<span id="cb548-4"><a href="optim.html#cb548-4"></a>fr &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb548-5"><a href="optim.html#cb548-5"></a>    x1 &lt;-<span class="st"> </span>x[<span class="dv">1</span>]</span>
+<span id="cb548-6"><a href="optim.html#cb548-6"></a>    x2 &lt;-<span class="st"> </span>x[<span class="dv">2</span>]</span>
+<span id="cb548-7"><a href="optim.html#cb548-7"></a>    <span class="dv">100</span> <span class="op">*</span><span class="st"> </span>(x2 <span class="op">-</span><span class="st"> </span>x1 <span class="op">*</span><span class="st"> </span>x1)<span class="op">^</span><span class="dv">2</span> <span class="op">+</span></span>
+<span id="cb548-8"><a href="optim.html#cb548-8"></a><span class="st">        </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>x1)<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb548-9"><a href="optim.html#cb548-9"></a>}</span>
+<span id="cb548-10"><a href="optim.html#cb548-10"></a><span class="co">## Gradient of &#39;fr&#39;</span></span>
+<span id="cb548-11"><a href="optim.html#cb548-11"></a>grr &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb548-12"><a href="optim.html#cb548-12"></a>    x1 &lt;-<span class="st"> </span>x[<span class="dv">1</span>]</span>
+<span id="cb548-13"><a href="optim.html#cb548-13"></a>    x2 &lt;-<span class="st"> </span>x[<span class="dv">2</span>]</span>
+<span id="cb548-14"><a href="optim.html#cb548-14"></a>    <span class="kw">c</span>(<span class="op">-</span><span class="dv">400</span> <span class="op">*</span><span class="st"> </span>x1 <span class="op">*</span><span class="st"> </span>(x2 <span class="op">-</span><span class="st"> </span>x1 <span class="op">*</span><span class="st"> </span>x1) <span class="op">-</span></span>
+<span id="cb548-15"><a href="optim.html#cb548-15"></a><span class="st">      </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>x1),</span>
+<span id="cb548-16"><a href="optim.html#cb548-16"></a>      <span class="dv">200</span> <span class="op">*</span><span class="st"> </span>(x2 <span class="op">-</span><span class="st"> </span>x1 <span class="op">*</span><span class="st"> </span>x1))</span>
+<span id="cb548-17"><a href="optim.html#cb548-17"></a>}</span>
+<span id="cb548-18"><a href="optim.html#cb548-18"></a><span class="co">## 3d plot to illustrate the</span></span>
+<span id="cb548-19"><a href="optim.html#cb548-19"></a><span class="co">## function</span></span>
+<span id="cb548-20"><a href="optim.html#cb548-20"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="fl">1.5</span>, <span class="dv">2</span>, <span class="dt">length=</span><span class="dv">1111</span>)</span>
+<span id="cb548-21"><a href="optim.html#cb548-21"></a>y &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">3</span>, <span class="dt">length=</span><span class="dv">1111</span>)</span>
+<span id="cb548-22"><a href="optim.html#cb548-22"></a></span>
+<span id="cb548-23"><a href="optim.html#cb548-23"></a>grid &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>y)</span>
+<span id="cb548-24"><a href="optim.html#cb548-24"></a>z &lt;-<span class="st"> </span><span class="kw">apply</span>(grid, <span class="dv">1</span>, fr)</span>
+<span id="cb548-25"><a href="optim.html#cb548-25"></a><span class="kw">contour</span>(x, y, <span class="kw">matrix</span>(z, <span class="dt">nrow=</span><span class="dv">1111</span>)</span>
+<span id="cb548-26"><a href="optim.html#cb548-26"></a>        ,<span class="dt">levels=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.005</span>,<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>,<span class="dv">100</span>))</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb549-1"><a href="optim.html#cb549-1"></a><span class="kw">library</span>(lattice)</span>
+<span id="cb549-2"><a href="optim.html#cb549-2"></a><span class="kw">contourplot</span>(z <span class="op">~</span><span class="st"> </span>grid<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>grid<span class="op">$</span>y,</span>
+<span id="cb549-3"><a href="optim.html#cb549-3"></a>            <span class="dt">at=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.005</span>,<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">10</span>,<span class="dv">100</span>))</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-72-2.png" width="672" /></p>
+<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb550-1"><a href="optim.html#cb550-1"></a><span class="co">##better plot on Wikipedia</span></span>
+<span id="cb550-2"><a href="optim.html#cb550-2"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr)</span></code></pre></div>
+<pre><code>## $par
+## [1] 1.000260 1.000506
+## 
+## $value
+## [1] 8.825241e-08
+## 
+## $counts
+## function gradient 
+##      195       NA 
+## 
+## $convergence
+## [1] 0
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb552-1"><a href="optim.html#cb552-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb552-2"><a href="optim.html#cb552-2"></a>      <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>)</span></code></pre></div>
+<pre><code>## $par
+## [1] 1 1
+## 
+## $value
+## [1] 9.594956e-18
+## 
+## $counts
+## function gradient 
+##      110       43 
+## 
+## $convergence
+## [1] 0
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb554-1"><a href="optim.html#cb554-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, <span class="ot">NULL</span>,</span>
+<span id="cb554-2"><a href="optim.html#cb554-2"></a>      <span class="dt">method =</span> <span class="st">&quot;BFGS&quot;</span>,</span>
+<span id="cb554-3"><a href="optim.html#cb554-3"></a>      <span class="dt">hessian =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## $par
+## [1] 0.9998044 0.9996084
+## 
+## $value
+## [1] 3.827383e-08
+## 
+## $counts
+## function gradient 
+##      118       38 
+## 
+## $convergence
+## [1] 0
+## 
+## $message
+## NULL
+## 
+## $hessian
+##           [,1]      [,2]
+## [1,]  801.6881 -399.9218
+## [2,] -399.9218  200.0000</code></pre>
+<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb556-1"><a href="optim.html#cb556-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb556-2"><a href="optim.html#cb556-2"></a>      <span class="dt">method =</span> <span class="st">&quot;CG&quot;</span>)</span></code></pre></div>
+<pre><code>## $par
+## [1] -0.7648373  0.5927588
+## 
+## $value
+## [1] 3.106579
+## 
+## $counts
+## function gradient 
+##      402      101 
+## 
+## $convergence
+## [1] 1
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="optim.html#cb558-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb558-2"><a href="optim.html#cb558-2"></a>      <span class="dt">method =</span> <span class="st">&quot;CG&quot;</span>,</span>
+<span id="cb558-3"><a href="optim.html#cb558-3"></a>      <span class="dt">control=</span><span class="kw">list</span>(<span class="dt">type=</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## $par
+## [1] 0.9944093 0.9888229
+## 
+## $value
+## [1] 3.123777e-05
+## 
+## $counts
+## function gradient 
+##      385      101 
+## 
+## $convergence
+## [1] 1
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="optim.html#cb560-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb560-2"><a href="optim.html#cb560-2"></a>      <span class="dt">method =</span> <span class="st">&quot;CG&quot;</span>,</span>
+<span id="cb560-3"><a href="optim.html#cb560-3"></a>      <span class="dt">control=</span><span class="kw">list</span>(<span class="dt">maxit=</span><span class="dv">1000</span>))</span></code></pre></div>
+<pre><code>## $par
+## [1] 0.9174130 0.8413632
+## 
+## $value
+## [1] 0.006802745
+## 
+## $counts
+## function gradient 
+##     3957     1001 
+## 
+## $convergence
+## [1] 1
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="optim.html#cb562-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb562-2"><a href="optim.html#cb562-2"></a>      <span class="dt">method =</span> <span class="st">&quot;CG&quot;</span>,</span>
+<span id="cb562-3"><a href="optim.html#cb562-3"></a>      <span class="dt">control=</span><span class="kw">list</span>(<span class="dt">maxit=</span><span class="dv">1000</span>, <span class="dt">type=</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## $par
+## [1] 1.000002 1.000004
+## 
+## $value
+## [1] 3.716007e-12
+## 
+## $counts
+## function gradient 
+##     1016      285 
+## 
+## $convergence
+## [1] 0
+## 
+## $message
+## NULL</code></pre>
+<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="optim.html#cb564-1"></a><span class="kw">optim</span>(<span class="kw">c</span>(<span class="op">-</span><span class="fl">1.2</span>, <span class="dv">1</span>), fr, grr,</span>
+<span id="cb564-2"><a href="optim.html#cb564-2"></a>      <span class="dt">method =</span> <span class="st">&quot;L-BFGS-B&quot;</span>)</span></code></pre></div>
+<pre><code>## $par
+## [1] 0.9999997 0.9999995
+## 
+## $value
+## [1] 2.267577e-13
+## 
+## $counts
+## function gradient 
+##       47       47 
+## 
+## $convergence
+## [1] 0
+## 
+## $message
+## [1] &quot;CONVERGENCE: REL_REDUCTION_OF_F &lt;= FACTR*EPSMCH&quot;</code></pre>
+<div id="rounding-error" class="section level3">
+<h3><span class="header-section-number">4.9.1</span> Rounding error</h3>
+<p>1.1 Computing sum: avoiding computing large + small</p>
+<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb566-1"><a href="optim.html#cb566-1"></a><span class="co">### demo of roundoff error: avoid large +- small</span></span>
+<span id="cb566-2"><a href="optim.html#cb566-2"></a><span class="kw">options</span>(<span class="dt">digits=</span><span class="dv">22</span>) <span class="co">## display values in 22 digits</span></span>
+<span id="cb566-3"><a href="optim.html#cb566-3"></a></span>
+<span id="cb566-4"><a href="optim.html#cb566-4"></a><span class="co"># a number f0</span></span>
+<span id="cb566-5"><a href="optim.html#cb566-5"></a>f0 &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">40</span>)</span>
+<span id="cb566-6"><a href="optim.html#cb566-6"></a></span>
+<span id="cb566-7"><a href="optim.html#cb566-7"></a>f1 &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb566-8"><a href="optim.html#cb566-8"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb566-9"><a href="optim.html#cb566-9"></a><span class="cf">while</span>(i <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span><span class="dv">12</span>){     </span>
+<span id="cb566-10"><a href="optim.html#cb566-10"></a>    f1 &lt;-<span class="st"> </span>f1 <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">52</span>)   </span>
+<span id="cb566-11"><a href="optim.html#cb566-11"></a>    i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span>   </span>
+<span id="cb566-12"><a href="optim.html#cb566-12"></a>}</span>
+<span id="cb566-13"><a href="optim.html#cb566-13"></a></span>
+<span id="cb566-14"><a href="optim.html#cb566-14"></a><span class="co">#A method that will give your wrong answer</span></span>
+<span id="cb566-15"><a href="optim.html#cb566-15"></a></span>
+<span id="cb566-16"><a href="optim.html#cb566-16"></a>f2 &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb566-17"><a href="optim.html#cb566-17"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb566-18"><a href="optim.html#cb566-18"></a><span class="cf">while</span>(i <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span><span class="dv">13</span>){     </span>
+<span id="cb566-19"><a href="optim.html#cb566-19"></a>    f2 &lt;-<span class="st"> </span>f2 <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">53</span>)   </span>
+<span id="cb566-20"><a href="optim.html#cb566-20"></a>    i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb566-21"><a href="optim.html#cb566-21"></a>}</span>
+<span id="cb566-22"><a href="optim.html#cb566-22"></a></span>
+<span id="cb566-23"><a href="optim.html#cb566-23"></a>f0</span></code></pre></div>
+<pre><code>## [1] 1.0000000000009095</code></pre>
+<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb568-1"><a href="optim.html#cb568-1"></a>f1 </span></code></pre></div>
+<pre><code>## [1] 1.0000000000009095</code></pre>
+<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb570-1"><a href="optim.html#cb570-1"></a>f2</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb572-1"><a href="optim.html#cb572-1"></a>f0<span class="op">==</span>f1 </span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb574"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb574-1"><a href="optim.html#cb574-1"></a>f0<span class="op">==</span>f2</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb576"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb576-1"><a href="optim.html#cb576-1"></a><span class="co">#R built-in function &#39;sum&#39;</span></span>
+<span id="cb576-2"><a href="optim.html#cb576-2"></a></span>
+<span id="cb576-3"><a href="optim.html#cb576-3"></a>f3 &lt;-<span class="st"> </span><span class="kw">sum</span> (<span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">rep</span> (<span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">53</span>),<span class="dv">2</span><span class="op">^</span><span class="dv">13</span>)))</span>
+<span id="cb576-4"><a href="optim.html#cb576-4"></a></span>
+<span id="cb576-5"><a href="optim.html#cb576-5"></a>f3</span></code></pre></div>
+<pre><code>## [1] 1.0000000000009095</code></pre>
+<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb578-1"><a href="optim.html#cb578-1"></a>f4 &lt;-<span class="st"> </span><span class="kw">sum</span> (<span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">rep</span> (<span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">54</span>),<span class="dv">2</span><span class="op">^</span><span class="dv">14</span>)))</span>
+<span id="cb578-2"><a href="optim.html#cb578-2"></a></span>
+<span id="cb578-3"><a href="optim.html#cb578-3"></a>f4</span></code></pre></div>
+<pre><code>## [1] 1.0000000000009095</code></pre>
+<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb580-1"><a href="optim.html#cb580-1"></a><span class="co"># a possible solution is to sort the numbers before adding</span></span>
+<span id="cb580-2"><a href="optim.html#cb580-2"></a></span>
+<span id="cb580-3"><a href="optim.html#cb580-3"></a>f6 &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb580-4"><a href="optim.html#cb580-4"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb580-5"><a href="optim.html#cb580-5"></a><span class="cf">while</span>(i <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span><span class="dv">14</span>){     </span>
+<span id="cb580-6"><a href="optim.html#cb580-6"></a>    f6 &lt;-<span class="st"> </span>f6 <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">54</span>)   </span>
+<span id="cb580-7"><a href="optim.html#cb580-7"></a>    i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb580-8"><a href="optim.html#cb580-8"></a>}</span>
+<span id="cb580-9"><a href="optim.html#cb580-9"></a><span class="kw">print</span> (f6)</span></code></pre></div>
+<pre><code>## [1] 9.0949470177292824e-13</code></pre>
+<div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb582-1"><a href="optim.html#cb582-1"></a>f6 &lt;-<span class="st"> </span>f6 <span class="op">+</span><span class="st"> </span><span class="dv">1</span>; f6</span></code></pre></div>
+<pre><code>## [1] 1.0000000000009095</code></pre>
+<p>Let’s remember the number of significant number in different bases</p>
+<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="optim.html#cb584-1"></a><span class="co">#base= exp(1) = 2.71</span></span>
+<span id="cb584-2"><a href="optim.html#cb584-2"></a><span class="kw">log</span>(<span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">52</span>))</span></code></pre></div>
+<pre><code>## [1] -36.043653389117154</code></pre>
+<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="optim.html#cb586-1"></a><span class="dv">1</span><span class="op">+</span><span class="st"> </span><span class="kw">exp</span> (<span class="op">-</span><span class="dv">35</span>) </span></code></pre></div>
+<pre><code>## [1] 1.0000000000000007</code></pre>
+<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="optim.html#cb588-1"></a><span class="co">#based 10</span></span>
+<span id="cb588-2"><a href="optim.html#cb588-2"></a><span class="kw">log</span>(<span class="dv">2</span><span class="op">^</span>(<span class="op">-</span><span class="dv">52</span>),<span class="dt">base=</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] -15.653559774527022</code></pre>
+</div>
+<div id="computing-exp-x-avoiding-computing-large---large" class="section level3">
+<h3><span class="header-section-number">4.9.2</span> 1.2 Computing exp (x): avoiding computing large - large</h3>
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="optim.html#cb590-1"></a>fexp &lt;-<span class="st"> </span><span class="cf">function</span>(x, <span class="dt">debug=</span><span class="ot">FALSE</span>) </span>
+<span id="cb590-2"><a href="optim.html#cb590-2"></a>{</span>
+<span id="cb590-3"><a href="optim.html#cb590-3"></a>    i &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb590-4"><a href="optim.html#cb590-4"></a>    expx &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb590-5"><a href="optim.html#cb590-5"></a>    u &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb590-6"><a href="optim.html#cb590-6"></a>    <span class="cf">while</span>(<span class="kw">abs</span>(u)<span class="op">&gt;</span><span class="fl">1e-20</span><span class="op">*</span><span class="kw">abs</span>(expx)) {</span>
+<span id="cb590-7"><a href="optim.html#cb590-7"></a>        i &lt;-<span class="st"> </span>i<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb590-8"><a href="optim.html#cb590-8"></a>        u &lt;-<span class="st"> </span>u<span class="op">*</span>x<span class="op">/</span>i</span>
+<span id="cb590-9"><a href="optim.html#cb590-9"></a>        expx &lt;-<span class="st"> </span>expx<span class="op">+</span>u</span>
+<span id="cb590-10"><a href="optim.html#cb590-10"></a>        <span class="cf">if</span> (debug){</span>
+<span id="cb590-11"><a href="optim.html#cb590-11"></a>            <span class="kw">cat</span>(<span class="kw">sprintf</span> (<span class="st">&quot;Step %d: adding %f, exp(%f) = %f</span><span class="ch">\n</span><span class="st">&quot;</span>, i, u, x, expx))</span>
+<span id="cb590-12"><a href="optim.html#cb590-12"></a>        }</span>
+<span id="cb590-13"><a href="optim.html#cb590-13"></a>    }</span>
+<span id="cb590-14"><a href="optim.html#cb590-14"></a>    expx</span>
+<span id="cb590-15"><a href="optim.html#cb590-15"></a>}</span>
+<span id="cb590-16"><a href="optim.html#cb590-16"></a></span>
+<span id="cb590-17"><a href="optim.html#cb590-17"></a><span class="kw">c</span>(<span class="kw">exp</span>(<span class="dv">10</span>),<span class="kw">fexp</span>(<span class="dv">10</span>))</span></code></pre></div>
+<pre><code>## [1] 22026.465794806718 22026.465794806711</code></pre>
+</div>
+<div id="univariate-optimization-for-mle" class="section level3">
+<h3><span class="header-section-number">4.9.3</span> Univariate Optimization for MLE</h3>
+<p><a href="https://math.usask.ca/~longhai/teaching/2018/stat812/rdemo/unit5-MLE1.html" class="uri">https://math.usask.ca/~longhai/teaching/2018/stat812/rdemo/unit5-MLE1.html</a></p>
+<p>Demonstration of Log Likelihood Function</p>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="optim.html#cb592-1"></a>log_like_cauchy &lt;-<span class="st"> </span><span class="cf">function</span> (theta, x) <span class="kw">sum</span>(<span class="kw">dcauchy</span>(x, theta, <span class="dt">log=</span><span class="ot">TRUE</span>))</span>
+<span id="cb592-2"><a href="optim.html#cb592-2"></a>thetas &lt;-<span class="st"> </span><span class="kw">seq</span> (<span class="dv">15</span>,<span class="dv">25</span>, <span class="dt">length=</span><span class="dv">100</span>)</span>
+<span id="cb592-3"><a href="optim.html#cb592-3"></a></span>
+<span id="cb592-4"><a href="optim.html#cb592-4"></a>d1 &lt;-<span class="st"> </span><span class="kw">rcauchy</span>(<span class="dv">50</span>, <span class="dt">location =</span> <span class="dv">20</span>)</span>
+<span id="cb592-5"><a href="optim.html#cb592-5"></a>log.like.d1 &lt;-<span class="st"> </span><span class="kw">sapply</span>(thetas, log_like_cauchy, <span class="dt">x =</span> d1)</span>
+<span id="cb592-6"><a href="optim.html#cb592-6"></a></span>
+<span id="cb592-7"><a href="optim.html#cb592-7"></a></span>
+<span id="cb592-8"><a href="optim.html#cb592-8"></a>d2 &lt;-<span class="st"> </span><span class="kw">rcauchy</span>(<span class="dv">100</span>, <span class="dt">location =</span> <span class="dv">20</span>)</span>
+<span id="cb592-9"><a href="optim.html#cb592-9"></a>log.like.d2 &lt;-<span class="st"> </span><span class="kw">sapply</span>(thetas, log_like_cauchy, <span class="dt">x =</span> d2)</span>
+<span id="cb592-10"><a href="optim.html#cb592-10"></a></span>
+<span id="cb592-11"><a href="optim.html#cb592-11"></a></span>
+<span id="cb592-12"><a href="optim.html#cb592-12"></a>d3 &lt;-<span class="st"> </span><span class="kw">rcauchy</span>(<span class="dv">200</span>, <span class="dt">location =</span> <span class="dv">20</span>)</span>
+<span id="cb592-13"><a href="optim.html#cb592-13"></a>log.like.d3 &lt;-<span class="st"> </span><span class="kw">sapply</span>(thetas, log_like_cauchy, <span class="dt">x =</span> d3)</span>
+<span id="cb592-14"><a href="optim.html#cb592-14"></a></span>
+<span id="cb592-15"><a href="optim.html#cb592-15"></a></span>
+<span id="cb592-16"><a href="optim.html#cb592-16"></a><span class="kw">matplot</span>(thetas, </span>
+<span id="cb592-17"><a href="optim.html#cb592-17"></a>        <span class="kw">data.frame</span>(log.like.d1, log.like.d2, log.like.d3), <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>,</span>
+<span id="cb592-18"><a href="optim.html#cb592-18"></a>        <span class="dt">ylab =</span> <span class="st">&quot;log likelihood&quot;</span>,</span>
+<span id="cb592-19"><a href="optim.html#cb592-19"></a>        <span class="dt">main =</span> <span class="st">&quot;Log Likelihood of Cauchy Models&quot;</span>)</span>
+<span id="cb592-20"><a href="optim.html#cb592-20"></a></span>
+<span id="cb592-21"><a href="optim.html#cb592-21"></a><span class="kw">abline</span> (<span class="dt">v =</span> <span class="dv">20</span>)</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="optim.html#cb593-1"></a><span class="co">## Let&#39;s look at the variability of log likelihood and MLE</span></span>
+<span id="cb593-2"><a href="optim.html#cb593-2"></a><span class="co"># also show how to automate the above code for multiple datasets</span></span>
+<span id="cb593-3"><a href="optim.html#cb593-3"></a>nrep &lt;-<span class="st"> </span><span class="dv">50</span></span>
+<span id="cb593-4"><a href="optim.html#cb593-4"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nrep){</span>
+<span id="cb593-5"><a href="optim.html#cb593-5"></a>    name.data &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;smalldata&quot;</span>,i)</span>
+<span id="cb593-6"><a href="optim.html#cb593-6"></a>    <span class="kw">assign</span>(name.data, <span class="kw">rcauchy</span>(<span class="dv">20</span>, <span class="dt">location =</span> <span class="dv">20</span>) )</span>
+<span id="cb593-7"><a href="optim.html#cb593-7"></a>    <span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;log.like.smalldata&quot;</span>,i), </span>
+<span id="cb593-8"><a href="optim.html#cb593-8"></a>           <span class="kw">sapply</span>(thetas, log_like_cauchy, <span class="dt">x =</span> <span class="kw">get</span>(name.data)))</span>
+<span id="cb593-9"><a href="optim.html#cb593-9"></a>}</span>
+<span id="cb593-10"><a href="optim.html#cb593-10"></a></span>
+<span id="cb593-11"><a href="optim.html#cb593-11"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nrep){</span>
+<span id="cb593-12"><a href="optim.html#cb593-12"></a>    name.data &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;largedata&quot;</span>,i)</span>
+<span id="cb593-13"><a href="optim.html#cb593-13"></a>    <span class="kw">assign</span>(name.data, <span class="kw">rcauchy</span>(<span class="dv">200</span>, <span class="dt">location =</span> <span class="dv">20</span>) )</span>
+<span id="cb593-14"><a href="optim.html#cb593-14"></a>    <span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;log.like.largedata&quot;</span>,i), </span>
+<span id="cb593-15"><a href="optim.html#cb593-15"></a>           <span class="kw">sapply</span>(thetas, log_like_cauchy, <span class="dt">x =</span> <span class="kw">get</span>(name.data)))</span>
+<span id="cb593-16"><a href="optim.html#cb593-16"></a>}</span>
+<span id="cb593-17"><a href="optim.html#cb593-17"></a></span>
+<span id="cb593-18"><a href="optim.html#cb593-18"></a><span class="kw">par</span> (<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb593-19"><a href="optim.html#cb593-19"></a><span class="kw">matplot</span>(thetas</span>
+<span id="cb593-20"><a href="optim.html#cb593-20"></a>        , <span class="kw">data.frame</span>(<span class="kw">mget</span>(<span class="kw">paste0</span>(<span class="st">&quot;log.like.smalldata&quot;</span>,<span class="dv">1</span><span class="op">:</span>nrep)))</span>
+<span id="cb593-21"><a href="optim.html#cb593-21"></a>        , <span class="dt">type =</span> <span class="st">&quot;l&quot;</span></span>
+<span id="cb593-22"><a href="optim.html#cb593-22"></a>        , <span class="dt">ylab =</span> <span class="st">&quot;log likelihood&quot;</span></span>
+<span id="cb593-23"><a href="optim.html#cb593-23"></a>        , <span class="dt">main =</span> <span class="st">&quot;Sample Size = 20&quot;</span></span>
+<span id="cb593-24"><a href="optim.html#cb593-24"></a>)</span>
+<span id="cb593-25"><a href="optim.html#cb593-25"></a></span>
+<span id="cb593-26"><a href="optim.html#cb593-26"></a><span class="kw">matplot</span>(thetas</span>
+<span id="cb593-27"><a href="optim.html#cb593-27"></a>        , <span class="kw">data.frame</span>(<span class="kw">mget</span>(<span class="kw">paste0</span>(<span class="st">&quot;log.like.largedata&quot;</span>,<span class="dv">1</span><span class="op">:</span>nrep)))</span>
+<span id="cb593-28"><a href="optim.html#cb593-28"></a>        , <span class="dt">type =</span> <span class="st">&quot;l&quot;</span></span>
+<span id="cb593-29"><a href="optim.html#cb593-29"></a>        , <span class="dt">ylab =</span> <span class="st">&quot;log likelihood&quot;</span></span>
+<span id="cb593-30"><a href="optim.html#cb593-30"></a>        , <span class="dt">main =</span> <span class="st">&quot;Sample Size = 200&quot;</span></span>
+<span id="cb593-31"><a href="optim.html#cb593-31"></a>)</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p>MAXIMUM LIKELIHOOD ESTIMATION FOR POISSON DATA WITH ZEROS UNOBSERVED</p>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="optim.html#cb594-1"></a><span class="co"># For all three functions,</span></span>
+<span id="cb594-2"><a href="optim.html#cb594-2"></a><span class="co"># the arguments are the vector of observations, the number of iterations to</span></span>
+<span id="cb594-3"><a href="optim.html#cb594-3"></a><span class="co"># do, and the initial guess (defaulting to the sample mean). The result is</span></span>
+<span id="cb594-4"><a href="optim.html#cb594-4"></a><span class="co"># a data frame with one row for each iteration (including the initial guess),</span></span>
+<span id="cb594-5"><a href="optim.html#cb594-5"></a><span class="co"># with the columns being the estimate for lambda at that iteration and the</span></span>
+<span id="cb594-6"><a href="optim.html#cb594-6"></a><span class="co"># log likelihood for that value of lambda (minus the factorial terms that</span></span>
+<span id="cb594-7"><a href="optim.html#cb594-7"></a><span class="co"># don’t involve lambda).</span></span>
+<span id="cb594-8"><a href="optim.html#cb594-8"></a><span class="co"># COMPUTE LOG LIKELIHOOD. The arguments are the data vector and a value for</span></span>
+<span id="cb594-9"><a href="optim.html#cb594-9"></a><span class="co"># lambda (or vector of values). The result is the log probability of the data</span></span>
+<span id="cb594-10"><a href="optim.html#cb594-10"></a><span class="co"># given that value for lambda, omitting the factorial terms (or a vector of</span></span>
+<span id="cb594-11"><a href="optim.html#cb594-11"></a><span class="co"># log probabilities if lambda is a vector).</span></span>
+<span id="cb594-12"><a href="optim.html#cb594-12"></a></span>
+<span id="cb594-13"><a href="optim.html#cb594-13"></a>nzp.log.likelihood &lt;-<span class="st"> </span><span class="cf">function</span> (n, lambda)</span>
+<span id="cb594-14"><a href="optim.html#cb594-14"></a>{</span>
+<span id="cb594-15"><a href="optim.html#cb594-15"></a>    <span class="kw">sum</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">log</span>(lambda) <span class="op">-</span><span class="st"> </span><span class="kw">length</span>(n) <span class="op">*</span><span class="st"> </span>(lambda <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">exp</span>(<span class="op">-</span>lambda)))</span>
+<span id="cb594-16"><a href="optim.html#cb594-16"></a>}</span>
+<span id="cb594-17"><a href="optim.html#cb594-17"></a>nzp.scorefunction &lt;-<span class="st"> </span><span class="cf">function</span>(n, lambda)</span>
+<span id="cb594-18"><a href="optim.html#cb594-18"></a>{</span>
+<span id="cb594-19"><a href="optim.html#cb594-19"></a>    mean.n &lt;-<span class="st"> </span><span class="kw">mean</span> (n)</span>
+<span id="cb594-20"><a href="optim.html#cb594-20"></a>    <span class="kw">sum</span>(n)<span class="op">/</span>lambda <span class="op">-</span><span class="st"> </span><span class="kw">length</span>(n)<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">exp</span>(<span class="op">-</span>lambda))</span>
+<span id="cb594-21"><a href="optim.html#cb594-21"></a>}</span>
+<span id="cb594-22"><a href="optim.html#cb594-22"></a><span class="co"># FIND MLE BY SIMPLE ITERATION.</span></span>
+<span id="cb594-23"><a href="optim.html#cb594-23"></a>nzp.simple.iteration &lt;-<span class="st"> </span><span class="cf">function</span> (n, r, <span class="dt">lambda0=</span><span class="kw">mean</span>(n))</span>
+<span id="cb594-24"><a href="optim.html#cb594-24"></a>{</span>
+<span id="cb594-25"><a href="optim.html#cb594-25"></a>    mean.n &lt;-<span class="st"> </span><span class="kw">mean</span>(n)</span>
+<span id="cb594-26"><a href="optim.html#cb594-26"></a>    lambda &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>,r<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb594-27"><a href="optim.html#cb594-27"></a>    lambda[<span class="dv">1</span>] &lt;-<span class="st"> </span>lambda0</span>
+<span id="cb594-28"><a href="optim.html#cb594-28"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r)</span>
+<span id="cb594-29"><a href="optim.html#cb594-29"></a>    { lambda[i<span class="op">+</span><span class="dv">1</span>] &lt;-<span class="st"> </span>mean.n <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span>lambda[i]))</span>
+<span id="cb594-30"><a href="optim.html#cb594-30"></a>    }</span>
+<span id="cb594-31"><a href="optim.html#cb594-31"></a>    <span class="kw">data.frame</span> (<span class="dt">lambda=</span>lambda, <span class="dt">log.lik=</span><span class="kw">nzp.log.likelihood</span>(n,lambda))</span>
+<span id="cb594-32"><a href="optim.html#cb594-32"></a>}</span>
+<span id="cb594-33"><a href="optim.html#cb594-33"></a></span>
+<span id="cb594-34"><a href="optim.html#cb594-34"></a><span class="co"># FIND MLE BY NEWTON-RAPHSON ITERATION.</span></span>
+<span id="cb594-35"><a href="optim.html#cb594-35"></a>nzp.newton.raphson &lt;-<span class="st"> </span><span class="cf">function</span> (n, r, <span class="dt">lambda0=</span><span class="kw">mean</span>(n))</span>
+<span id="cb594-36"><a href="optim.html#cb594-36"></a>{</span>
+<span id="cb594-37"><a href="optim.html#cb594-37"></a>    mean.n &lt;-<span class="st"> </span><span class="kw">mean</span>(n)</span>
+<span id="cb594-38"><a href="optim.html#cb594-38"></a>    lambda &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>,r<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb594-39"><a href="optim.html#cb594-39"></a>    lambda[<span class="dv">1</span>] &lt;-<span class="st"> </span>lambda0</span>
+<span id="cb594-40"><a href="optim.html#cb594-40"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r)</span>
+<span id="cb594-41"><a href="optim.html#cb594-41"></a>    { e &lt;-<span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span>lambda[i])</span>
+<span id="cb594-42"><a href="optim.html#cb594-42"></a>    lambda[i<span class="op">+</span><span class="dv">1</span>] &lt;-<span class="st"> </span>lambda[i] <span class="op">-</span></span>
+<span id="cb594-43"><a href="optim.html#cb594-43"></a><span class="st">        </span>(mean.n<span class="op">/</span>lambda[i] <span class="op">-</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>e)) <span class="op">/</span><span class="st"> </span>(e<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>e)<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span>mean.n<span class="op">/</span>lambda[i]<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb594-44"><a href="optim.html#cb594-44"></a>    }</span>
+<span id="cb594-45"><a href="optim.html#cb594-45"></a>    <span class="kw">data.frame</span> (<span class="dt">lambda=</span>lambda, <span class="dt">log.lik=</span><span class="kw">nzp.log.likelihood</span>(n,lambda))</span>
+<span id="cb594-46"><a href="optim.html#cb594-46"></a>}</span>
+<span id="cb594-47"><a href="optim.html#cb594-47"></a><span class="co"># FIND MLE BY THE METHOD OF SCORING.</span></span>
+<span id="cb594-48"><a href="optim.html#cb594-48"></a>nzp.method.of.scoring &lt;-<span class="st"> </span><span class="cf">function</span> (n, r, <span class="dt">lambda0=</span><span class="kw">mean</span>(n))</span>
+<span id="cb594-49"><a href="optim.html#cb594-49"></a>{</span>
+<span id="cb594-50"><a href="optim.html#cb594-50"></a>    mean.n &lt;-<span class="st"> </span><span class="kw">mean</span>(n)</span>
+<span id="cb594-51"><a href="optim.html#cb594-51"></a>    lambda &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>,r<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb594-52"><a href="optim.html#cb594-52"></a>    lambda[<span class="dv">1</span>] &lt;-<span class="st"> </span>lambda0</span>
+<span id="cb594-53"><a href="optim.html#cb594-53"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>r)</span>
+<span id="cb594-54"><a href="optim.html#cb594-54"></a>    { e &lt;-<span class="st"> </span><span class="kw">exp</span>(<span class="op">-</span>lambda[i])</span>
+<span id="cb594-55"><a href="optim.html#cb594-55"></a>    lambda[i<span class="op">+</span><span class="dv">1</span>] &lt;-<span class="st"> </span>lambda[i] <span class="op">-</span></span>
+<span id="cb594-56"><a href="optim.html#cb594-56"></a><span class="st">        </span>(mean.n<span class="op">/</span>lambda[i] <span class="op">-</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>e)) <span class="op">/</span><span class="st"> </span>((e<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>e) <span class="op">-</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>lambda[i]) <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>e))</span>
+<span id="cb594-57"><a href="optim.html#cb594-57"></a>    }</span>
+<span id="cb594-58"><a href="optim.html#cb594-58"></a>    <span class="kw">data.frame</span> (<span class="dt">lambda=</span>lambda, <span class="dt">log.lik=</span><span class="kw">nzp.log.likelihood</span>(n,lambda))</span>
+<span id="cb594-59"><a href="optim.html#cb594-59"></a>}</span>
+<span id="cb594-60"><a href="optim.html#cb594-60"></a></span>
+<span id="cb594-61"><a href="optim.html#cb594-61"></a><span class="co">## test with generated datasets</span></span>
+<span id="cb594-62"><a href="optim.html#cb594-62"></a>x&lt;-<span class="kw">rpois</span> (<span class="dv">100</span>, <span class="dt">lambda =</span> <span class="fl">1.5</span>)</span>
+<span id="cb594-63"><a href="optim.html#cb594-63"></a>xp &lt;-<span class="st"> </span>x[x<span class="op">&gt;</span><span class="dv">0</span>]</span>
+<span id="cb594-64"><a href="optim.html#cb594-64"></a><span class="co"># mean of xp is upward biased estimates of 1.5</span></span>
+<span id="cb594-65"><a href="optim.html#cb594-65"></a><span class="kw">mean</span>(xp)</span></code></pre></div>
+<pre><code>## [1] 2.0253164556962027</code></pre>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="optim.html#cb596-1"></a><span class="co">## look at the log likelihood</span></span>
+<span id="cb596-2"><a href="optim.html#cb596-2"></a>lambdas &lt;-<span class="st"> </span><span class="kw">seq</span> (<span class="fl">0.1</span>, <span class="dv">20</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb596-3"><a href="optim.html#cb596-3"></a>log.like.values &lt;-<span class="st"> </span><span class="kw">sapply</span> (lambdas, nzp.log.likelihood, <span class="dt">n =</span> xp)</span>
+<span id="cb596-4"><a href="optim.html#cb596-4"></a>score.values &lt;-<span class="st"> </span><span class="kw">sapply</span> (lambdas, nzp.scorefunction, <span class="dt">n =</span> xp)</span>
+<span id="cb596-5"><a href="optim.html#cb596-5"></a><span class="kw">matplot</span>(lambdas, <span class="kw">data.frame</span>(log.like.values, score.values), <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)</span>
+<span id="cb596-6"><a href="optim.html#cb596-6"></a><span class="kw">legend</span>(<span class="st">&quot;bottomleft&quot;</span>, <span class="dt">legend =</span> <span class="kw">c</span>(<span class="st">&quot;log likelihood&quot;</span>, <span class="st">&quot;Score function&quot;</span>), <span class="dt">lty =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb597-1"><a href="optim.html#cb597-1"></a><span class="kw">nzp.simple.iteration</span>(xp,<span class="dv">15</span>, <span class="kw">mean</span>(xp))</span></code></pre></div>
+<pre><code>##                lambda             log.lik
+## 1  2.0253164556962027 -35.904685675051255
+## 2  1.7580717375335657 -33.666251197504891
+## 3  1.6761986196851433 -33.412077446841138
+## 4  1.6464125514756185 -33.376137706291289
+## 5  1.6349567289480822 -33.370686448429112
+## 6  1.6304591245045512 -33.369837922477942
+## 7  1.6286792127481131 -33.369704514449012
+## 8  1.6279726047929950 -33.369683456817143
+## 9  1.6276917392478016 -33.369680127810568
+## 10 1.6275800444801622 -33.369679601200858
+## 11 1.6275356169230131 -33.369679517876889
+## 12 1.6275179440994885 -33.369679504691490
+## 13 1.6275109138144723 -33.369679502604896
+## 14 1.6275081171183010 -33.369679502274707
+## 15 1.6275070045676878 -33.369679502222468
+## 16 1.6275065619842930 -33.369679502214183</code></pre>
+<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb599-1"><a href="optim.html#cb599-1"></a><span class="kw">nzp.simple.iteration</span>(xp,<span class="dv">15</span>,<span class="fl">0.1</span>)  </span></code></pre></div>
+<pre><code>##                 lambda              log.lik
+## 1  0.10000000000000001 -190.492306456564137
+## 2  0.19273434321830984 -141.097085074328362
+## 3  0.35503588361965410  -98.316848129052346
+## 4  0.60526930021499392  -65.779007663589056
+## 5  0.91964073219482434  -45.875886643374471
+## 6  1.21789925697640378  -36.963187739060054
+## 7  1.42612451334236345  -34.164864183283257
+## 8  1.53875815647464576  -33.517596256558647
+## 9  1.59058735273961105  -33.394797406005011
+## 10 1.61254507212950293  -33.373772200390846
+## 11 1.62150980758298058  -33.370334873476395
+## 12 1.62511364947742920  -33.369783708026560
+## 13 1.62655332138362585  -33.369696024209560
+## 14 1.62712699641432423  -33.369682118831093
+## 15 1.62735536225444810  -33.369679916423948
+## 16 1.62744623259765264  -33.369679567770575</code></pre>
+<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb601-1"><a href="optim.html#cb601-1"></a><span class="kw">nzp.simple.iteration</span>(xp,<span class="dv">15</span>,<span class="dv">100</span>)  </span></code></pre></div>
+<pre><code>##                  lambda               log.lik
+## 1  100.0000000000000000 -7163.172770241904800
+## 2    2.0253164556962027   -35.904685675051255
+## 3    1.7580717375335657   -33.666251197504891
+## 4    1.6761986196851433   -33.412077446841138
+## 5    1.6464125514756185   -33.376137706291289
+## 6    1.6349567289480822   -33.370686448429112
+## 7    1.6304591245045512   -33.369837922477942
+## 8    1.6286792127481131   -33.369704514449012
+## 9    1.6279726047929950   -33.369683456817143
+## 10   1.6276917392478016   -33.369680127810568
+## 11   1.6275800444801622   -33.369679601200858
+## 12   1.6275356169230131   -33.369679517876889
+## 13   1.6275179440994885   -33.369679504691490
+## 14   1.6275109138144723   -33.369679502604896
+## 15   1.6275081171183010   -33.369679502274707
+## 16   1.6275070045676878   -33.369679502222468</code></pre>
+<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb603-1"><a href="optim.html#cb603-1"></a><span class="kw">nzp.newton.raphson</span>(xp,<span class="dv">15</span>, <span class="kw">mean</span>(xp))  </span></code></pre></div>
+<pre><code>##                lambda             log.lik
+## 1  2.0253164556962027 -35.904685675051255
+## 2  1.5482464898578152 -33.487245855684591
+## 3  1.6241492088689566 -33.369884717952175
+## 4  1.6275003100154648 -33.369679502858602
+## 5  1.6275062695924662 -33.369679502212634
+## 6  1.6275062696112383 -33.369679502212620
+## 7  1.6275062696112388 -33.369679502212634
+## 8  1.6275062696112383 -33.369679502212620
+## 9  1.6275062696112388 -33.369679502212634
+## 10 1.6275062696112383 -33.369679502212620
+## 11 1.6275062696112388 -33.369679502212634
+## 12 1.6275062696112383 -33.369679502212620
+## 13 1.6275062696112388 -33.369679502212634
+## 14 1.6275062696112383 -33.369679502212620
+## 15 1.6275062696112388 -33.369679502212634
+## 16 1.6275062696112383 -33.369679502212620</code></pre>
+<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb605-1"><a href="optim.html#cb605-1"></a><span class="kw">nzp.newton.raphson</span>(xp,<span class="dv">15</span>,<span class="fl">0.1</span>)  </span></code></pre></div>
+<pre><code>##                 lambda              log.lik
+## 1  0.10000000000000001 -190.492306456564137
+## 2  0.19496504966112618 -140.255933101753101
+## 3  0.37025124435616719  -95.555101808019629
+## 4  0.66626047867433624  -60.665142921345733
+## 5  1.07766872637701727  -40.295617134418734
+## 6  1.45549940449159121  -33.943151496629881
+## 7  1.61149248598895856  -33.374370091108403
+## 8  1.62737042391599362  -33.369679837865675
+## 9  1.62750625985692121  -33.369679502212634
+## 10 1.62750626961123857  -33.369679502212648
+## 11 1.62750626961123857  -33.369679502212648
+## 12 1.62750626961123857  -33.369679502212648
+## 13 1.62750626961123857  -33.369679502212648
+## 14 1.62750626961123857  -33.369679502212648
+## 15 1.62750626961123857  -33.369679502212648
+## 16 1.62750626961123857  -33.369679502212648</code></pre>
+<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb607-1"><a href="optim.html#cb607-1"></a><span class="kw">nzp.newton.raphson</span>(xp,<span class="dv">15</span>,<span class="dv">100</span>)  </span></code></pre></div>
+<pre><code>## Warning in log(lambda): NaNs produced</code></pre>
+<pre><code>## Warning in log(1 - exp(-lambda)): NaNs produced</code></pre>
+<pre><code>##     lambda             log.lik
+## 1    100.0 -7163.1727702419048
+## 2  -4737.5                 NaN
+## 3      NaN                 NaN
+## 4      NaN                 NaN
+## 5      NaN                 NaN
+## 6      NaN                 NaN
+## 7      NaN                 NaN
+## 8      NaN                 NaN
+## 9      NaN                 NaN
+## 10     NaN                 NaN
+## 11     NaN                 NaN
+## 12     NaN                 NaN
+## 13     NaN                 NaN
+## 14     NaN                 NaN
+## 15     NaN                 NaN
+## 16     NaN                 NaN</code></pre>
+<div class="sourceCode" id="cb611"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb611-1"><a href="optim.html#cb611-1"></a><span class="kw">nzp.method.of.scoring</span>(xp,<span class="dv">15</span>, <span class="kw">mean</span>(xp))  </span></code></pre></div>
+<pre><code>##                lambda             log.lik
+## 1  2.0253164556962027 -35.904685675051255
+## 2  1.6391979713502165 -33.372155498197984
+## 3  1.6275179563658406 -33.369679504696705
+## 4  1.6275062696229672 -33.369679502212634
+## 5  1.6275062696112388 -33.369679502212634
+## 6  1.6275062696112383 -33.369679502212620
+## 7  1.6275062696112388 -33.369679502212634
+## 8  1.6275062696112383 -33.369679502212620
+## 9  1.6275062696112388 -33.369679502212634
+## 10 1.6275062696112383 -33.369679502212620
+## 11 1.6275062696112388 -33.369679502212634
+## 12 1.6275062696112383 -33.369679502212620
+## 13 1.6275062696112388 -33.369679502212634
+## 14 1.6275062696112383 -33.369679502212620
+## 15 1.6275062696112388 -33.369679502212634
+## 16 1.6275062696112383 -33.369679502212620</code></pre>
+<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb613-1"><a href="optim.html#cb613-1"></a><span class="kw">nzp.method.of.scoring</span>(xp,<span class="dv">15</span>,<span class="fl">0.1</span>)  </span></code></pre></div>
+<pre><code>##                 lambda              log.lik
+## 1  0.10000000000000001 -190.492306456564137
+## 2  1.98611690820304632  -35.453494278217661
+## 3  1.63714912292448123  -33.371364957895139
+## 4  1.62751422545683178  -33.369679503363827
+## 5  1.62750626961667444  -33.369679502212648
+## 6  1.62750626961123879  -33.369679502212634
+## 7  1.62750626961123834  -33.369679502212620
+## 8  1.62750626961123879  -33.369679502212634
+## 9  1.62750626961123834  -33.369679502212620
+## 10 1.62750626961123879  -33.369679502212634
+## 11 1.62750626961123834  -33.369679502212620
+## 12 1.62750626961123879  -33.369679502212634
+## 13 1.62750626961123834  -33.369679502212620
+## 14 1.62750626961123879  -33.369679502212634
+## 15 1.62750626961123834  -33.369679502212620
+## 16 1.62750626961123879  -33.369679502212634</code></pre>
+<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb615-1"><a href="optim.html#cb615-1"></a><span class="kw">nzp.method.of.scoring</span>(xp,<span class="dv">15</span>,<span class="dv">1000</span>)  </span></code></pre></div>
+<pre><code>##                   lambda                log.lik
+## 1  1000.0000000000000000 -77894.759155362859019
+## 2     2.0253164556962702    -35.904685675052065
+## 3     1.6391979713502201    -33.372155498197984
+## 4     1.6275179563658402    -33.369679504696691
+## 5     1.6275062696229672    -33.369679502212634
+## 6     1.6275062696112388    -33.369679502212634
+## 7     1.6275062696112383    -33.369679502212620
+## 8     1.6275062696112388    -33.369679502212634
+## 9     1.6275062696112383    -33.369679502212620
+## 10    1.6275062696112388    -33.369679502212634
+## 11    1.6275062696112383    -33.369679502212620
+## 12    1.6275062696112388    -33.369679502212634
+## 13    1.6275062696112383    -33.369679502212620
+## 14    1.6275062696112388    -33.369679502212634
+## 15    1.6275062696112383    -33.369679502212620
+## 16    1.6275062696112388    -33.369679502212634</code></pre>
+<p>A Demonstration of Golden section method for non-differential function</p>
+<div class="sourceCode" id="cb617"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb617-1"><a href="optim.html#cb617-1"></a>golden &lt;-<span class="st"> </span><span class="cf">function</span>(f,brack.int,<span class="dt">eps=</span><span class="fl">1e-4</span>,...) {</span>
+<span id="cb617-2"><a href="optim.html#cb617-2"></a>    g &lt;-<span class="st"> </span>(<span class="dv">3</span><span class="op">-</span><span class="kw">sqrt</span>(<span class="dv">5</span>))<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb617-3"><a href="optim.html#cb617-3"></a>    xl &lt;-<span class="st"> </span><span class="kw">min</span>(brack.int)</span>
+<span id="cb617-4"><a href="optim.html#cb617-4"></a>    xu &lt;-<span class="st"> </span><span class="kw">max</span>(brack.int)</span>
+<span id="cb617-5"><a href="optim.html#cb617-5"></a>    tmp &lt;-<span class="st"> </span>g<span class="op">*</span>(xu<span class="op">-</span>xl)</span>
+<span id="cb617-6"><a href="optim.html#cb617-6"></a>    xmu &lt;-<span class="st"> </span>xu<span class="op">-</span>tmp</span>
+<span id="cb617-7"><a href="optim.html#cb617-7"></a>    xml &lt;-<span class="st"> </span>xl<span class="op">+</span>tmp</span>
+<span id="cb617-8"><a href="optim.html#cb617-8"></a>    fl &lt;-<span class="st"> </span><span class="kw">f</span>(xml,...)</span>
+<span id="cb617-9"><a href="optim.html#cb617-9"></a>    fu &lt;-<span class="st"> </span><span class="kw">f</span>(xmu,...)</span>
+<span id="cb617-10"><a href="optim.html#cb617-10"></a>    <span class="cf">while</span>(<span class="kw">abs</span>(xu<span class="op">-</span>xl)<span class="op">&gt;</span>(<span class="dv">1</span>.e<span class="dv">-5</span><span class="op">+</span><span class="kw">abs</span>(xl))<span class="op">*</span>eps) {</span>
+<span id="cb617-11"><a href="optim.html#cb617-11"></a>        <span class="cf">if</span> (fl<span class="op">&lt;</span>fu) {</span>
+<span id="cb617-12"><a href="optim.html#cb617-12"></a>            xu &lt;-<span class="st"> </span>xmu</span>
+<span id="cb617-13"><a href="optim.html#cb617-13"></a>            xmu &lt;-<span class="st"> </span>xml</span>
+<span id="cb617-14"><a href="optim.html#cb617-14"></a>            fu &lt;-<span class="st"> </span>fl</span>
+<span id="cb617-15"><a href="optim.html#cb617-15"></a>            xml &lt;-<span class="st"> </span>xl<span class="op">+</span>g<span class="op">*</span>(xu<span class="op">-</span>xl)</span>
+<span id="cb617-16"><a href="optim.html#cb617-16"></a>            fl &lt;-<span class="st"> </span><span class="kw">f</span>(xml,...)</span>
+<span id="cb617-17"><a href="optim.html#cb617-17"></a>        } <span class="cf">else</span> {</span>
+<span id="cb617-18"><a href="optim.html#cb617-18"></a>            xl &lt;-<span class="st"> </span>xml</span>
+<span id="cb617-19"><a href="optim.html#cb617-19"></a>            xml &lt;-<span class="st"> </span>xmu</span>
+<span id="cb617-20"><a href="optim.html#cb617-20"></a>            fl &lt;-<span class="st"> </span>fu</span>
+<span id="cb617-21"><a href="optim.html#cb617-21"></a>            xmu &lt;-<span class="st"> </span>xu<span class="op">-</span>g<span class="op">*</span>(xu<span class="op">-</span>xl)</span>
+<span id="cb617-22"><a href="optim.html#cb617-22"></a>            fu &lt;-<span class="st"> </span><span class="kw">f</span>(xmu,...)</span>
+<span id="cb617-23"><a href="optim.html#cb617-23"></a>        }</span>
+<span id="cb617-24"><a href="optim.html#cb617-24"></a>    }</span>
+<span id="cb617-25"><a href="optim.html#cb617-25"></a>    <span class="cf">if</span> (fl<span class="op">&lt;</span>fu) xml <span class="cf">else</span> xmu</span>
+<span id="cb617-26"><a href="optim.html#cb617-26"></a>}</span>
+<span id="cb617-27"><a href="optim.html#cb617-27"></a></span>
+<span id="cb617-28"><a href="optim.html#cb617-28"></a><span class="co">## a test</span></span>
+<span id="cb617-29"><a href="optim.html#cb617-29"></a>f1 &lt;-<span class="st"> </span><span class="cf">function</span>(theta) <span class="dv">-1997</span><span class="op">*</span><span class="kw">log</span>(<span class="dv">2</span><span class="op">+</span>theta)<span class="op">-</span><span class="dv">1810</span><span class="op">*</span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>theta)<span class="op">-</span><span class="dv">32</span><span class="op">*</span><span class="kw">log</span>(theta)</span>
+<span id="cb617-30"><a href="optim.html#cb617-30"></a><span class="kw">plot</span> (f1, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="fl">0.001</span>,<span class="fl">0.999</span>))</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="optim.html#cb618-1"></a><span class="kw">golden</span>(f1,<span class="kw">c</span>(.<span class="dv">001</span>,.<span class="dv">999</span>))</span></code></pre></div>
+<pre><code>## [1] 0.035712469364208806</code></pre>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="optim.html#cb620-1"></a>f2 &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">abs</span>(x<span class="dv">-10</span>)</span>
+<span id="cb620-2"><a href="optim.html#cb620-2"></a><span class="kw">plot</span> (f2, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">20</span>))</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p>Find MLE and SD for Poisson Interval Data with “nlm”</p>
+<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb621-1"><a href="optim.html#cb621-1"></a><span class="co">## a utility function to avoid over/under flow in computing log_sum_exp</span></span>
+<span id="cb621-2"><a href="optim.html#cb621-2"></a>log_sum_exp &lt;-<span class="st"> </span><span class="cf">function</span> (lx)</span>
+<span id="cb621-3"><a href="optim.html#cb621-3"></a>{</span>
+<span id="cb621-4"><a href="optim.html#cb621-4"></a>    mlx &lt;-<span class="st"> </span><span class="kw">max</span> (lx)</span>
+<span id="cb621-5"><a href="optim.html#cb621-5"></a>    mlx <span class="op">+</span><span class="st"> </span><span class="kw">log</span>(<span class="kw">sum</span>(<span class="kw">exp</span>(lx <span class="op">-</span><span class="st"> </span>mlx)))</span>
+<span id="cb621-6"><a href="optim.html#cb621-6"></a>}</span>
+<span id="cb621-7"><a href="optim.html#cb621-7"></a></span>
+<span id="cb621-8"><a href="optim.html#cb621-8"></a><span class="co"># Compute the log likelihood for a Poisson mean parameter given interval</span></span>
+<span id="cb621-9"><a href="optim.html#cb621-9"></a><span class="co"># data.</span></span>
+<span id="cb621-10"><a href="optim.html#cb621-10"></a><span class="co">#</span></span>
+<span id="cb621-11"><a href="optim.html#cb621-11"></a><span class="co"># Arguments:</span></span>
+<span id="cb621-12"><a href="optim.html#cb621-12"></a><span class="co">#     lambda   The Poisson mean parameter</span></span>
+<span id="cb621-13"><a href="optim.html#cb621-13"></a><span class="co">#     low      Vector of low ends of intervals (positive integer)</span></span>
+<span id="cb621-14"><a href="optim.html#cb621-14"></a><span class="co">#     high     Vector of high ends of intervals (positive integer)</span></span>
+<span id="cb621-15"><a href="optim.html#cb621-15"></a><span class="co">#</span></span>
+<span id="cb621-16"><a href="optim.html#cb621-16"></a><span class="co"># Value:  The log probability of Poisson values lying in the given</span></span>
+<span id="cb621-17"><a href="optim.html#cb621-17"></a><span class="co">#         intervals, based on the mean parameter given.</span></span>
+<span id="cb621-18"><a href="optim.html#cb621-18"></a>poisson_log_likelihood &lt;-<span class="st"> </span><span class="cf">function</span> (lambda, low, high)</span>
+<span id="cb621-19"><a href="optim.html#cb621-19"></a>{</span>
+<span id="cb621-20"><a href="optim.html#cb621-20"></a>    ll &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb621-21"><a href="optim.html#cb621-21"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(low)) {</span>
+<span id="cb621-22"><a href="optim.html#cb621-22"></a>        lp &lt;-<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb621-23"><a href="optim.html#cb621-23"></a>        <span class="cf">for</span> (x <span class="cf">in</span> low[i]<span class="op">:</span>high[i])</span>
+<span id="cb621-24"><a href="optim.html#cb621-24"></a>            lp &lt;-<span class="st"> </span><span class="kw">c</span>(lp, <span class="kw">dpois</span> (x, lambda, <span class="dt">log =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb621-25"><a href="optim.html#cb621-25"></a>        ll &lt;-<span class="st"> </span>ll <span class="op">+</span><span class="st"> </span><span class="kw">log_sum_exp</span> (lp)</span>
+<span id="cb621-26"><a href="optim.html#cb621-26"></a>    }</span>
+<span id="cb621-27"><a href="optim.html#cb621-27"></a>    ll</span>
+<span id="cb621-28"><a href="optim.html#cb621-28"></a>}</span>
+<span id="cb621-29"><a href="optim.html#cb621-29"></a></span>
+<span id="cb621-30"><a href="optim.html#cb621-30"></a></span>
+<span id="cb621-31"><a href="optim.html#cb621-31"></a><span class="co"># Find the MLE for the Poisson mean parameter given data on iid values </span></span>
+<span id="cb621-32"><a href="optim.html#cb621-32"></a><span class="co"># specifying an interval in which each value lies (not necessarily a</span></span>
+<span id="cb621-33"><a href="optim.html#cb621-33"></a><span class="co"># single value).</span></span>
+<span id="cb621-34"><a href="optim.html#cb621-34"></a><span class="co">#</span></span>
+<span id="cb621-35"><a href="optim.html#cb621-35"></a><span class="co"># Arguments:</span></span>
+<span id="cb621-36"><a href="optim.html#cb621-36"></a><span class="co">#     low      Vector of low ends of intervals (non-negative integers)</span></span>
+<span id="cb621-37"><a href="optim.html#cb621-37"></a><span class="co">#     high     Vector of high ends of intervals (non-negative integers)</span></span>
+<span id="cb621-38"><a href="optim.html#cb621-38"></a><span class="co">#</span></span>
+<span id="cb621-39"><a href="optim.html#cb621-39"></a><span class="co"># Values:  </span></span>
+<span id="cb621-40"><a href="optim.html#cb621-40"></a><span class="co">#     MLE for the mean parameter and </span></span>
+<span id="cb621-41"><a href="optim.html#cb621-41"></a><span class="co">#     standard deviation.</span></span>
+<span id="cb621-42"><a href="optim.html#cb621-42"></a></span>
+<span id="cb621-43"><a href="optim.html#cb621-43"></a>poisson_mle &lt;-<span class="st"> </span><span class="cf">function</span> (low, high)</span>
+<span id="cb621-44"><a href="optim.html#cb621-44"></a>{</span>
+<span id="cb621-45"><a href="optim.html#cb621-45"></a>    <span class="cf">if</span> (<span class="kw">length</span>(low) <span class="op">!=</span><span class="st"> </span><span class="kw">length</span>(high))</span>
+<span id="cb621-46"><a href="optim.html#cb621-46"></a>        <span class="kw">stop</span>(<span class="st">&quot;low and high have different lengths&quot;</span>)</span>
+<span id="cb621-47"><a href="optim.html#cb621-47"></a>    </span>
+<span id="cb621-48"><a href="optim.html#cb621-48"></a>    <span class="cf">if</span> (<span class="kw">any</span>(<span class="kw">floor</span>(low)<span class="op">!=</span>low) <span class="op">||</span><span class="st"> </span><span class="kw">any</span>(<span class="kw">floor</span>(high)<span class="op">!=</span>high))</span>
+<span id="cb621-49"><a href="optim.html#cb621-49"></a>        <span class="kw">stop</span>(<span class="st">&quot;interval ends are not all integers&quot;</span>)</span>
+<span id="cb621-50"><a href="optim.html#cb621-50"></a>    </span>
+<span id="cb621-51"><a href="optim.html#cb621-51"></a>    neg_log_like &lt;-<span class="cf">function</span> (lambda) <span class="op">-</span><span class="kw">poisson_log_likelihood</span> (lambda,low,high)</span>
+<span id="cb621-52"><a href="optim.html#cb621-52"></a>    nlmfit &lt;-<span class="st"> </span><span class="kw">nlm</span> (neg_log_like,</span>
+<span id="cb621-53"><a href="optim.html#cb621-53"></a>                   (<span class="kw">mean</span>(low) <span class="op">+</span><span class="st"> </span><span class="kw">mean</span>(high)) <span class="op">/</span><span class="st"> </span><span class="dv">2</span>, <span class="dt">hessian =</span> <span class="ot">TRUE</span>) </span>
+<span id="cb621-54"><a href="optim.html#cb621-54"></a>    est &lt;-<span class="st"> </span>nlmfit<span class="op">$</span>estimate</span>
+<span id="cb621-55"><a href="optim.html#cb621-55"></a>    sd &lt;-<span class="st"> </span><span class="kw">sqrt</span> (<span class="dv">1</span><span class="op">/</span>nlmfit<span class="op">$</span>hessian[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb621-56"><a href="optim.html#cb621-56"></a>    CI &lt;-<span class="st"> </span>est <span class="op">+</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span>sd, sd) <span class="op">*</span><span class="st"> </span><span class="fl">1.96</span></span>
+<span id="cb621-57"><a href="optim.html#cb621-57"></a>    <span class="kw">list</span> (<span class="dt">est=</span>est, <span class="dt">sd =</span> sd, <span class="dt">CI =</span> CI)</span>
+<span id="cb621-58"><a href="optim.html#cb621-58"></a>}</span>
+<span id="cb621-59"><a href="optim.html#cb621-59"></a></span>
+<span id="cb621-60"><a href="optim.html#cb621-60"></a></span>
+<span id="cb621-61"><a href="optim.html#cb621-61"></a><span class="co">## a test with a simulated data set</span></span>
+<span id="cb621-62"><a href="optim.html#cb621-62"></a></span>
+<span id="cb621-63"><a href="optim.html#cb621-63"></a>pn &lt;-<span class="st"> </span><span class="kw">rpois</span> (<span class="dv">1000</span>, <span class="dt">lambda =</span> <span class="dv">20</span>)</span>
+<span id="cb621-64"><a href="optim.html#cb621-64"></a>low &lt;-<span class="st"> </span><span class="kw">pmax</span>(pn <span class="op">-</span><span class="st"> </span><span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb621-65"><a href="optim.html#cb621-65"></a>high &lt;-<span class="st"> </span>pn <span class="op">+</span><span class="st"> </span><span class="dv">4</span></span>
+<span id="cb621-66"><a href="optim.html#cb621-66"></a><span class="kw">poisson_mle</span> (low, high)</span></code></pre></div>
+<pre><code>## $est
+## [1] 21.485221166603381
+## 
+## $sd
+## [1] 0.15632940566431977
+## 
+## $CI
+## [1] 21.178815531501314 21.791626801705448</code></pre>
+<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="optim.html#cb623-1"></a><span class="co"># from the result, we have also found that the sd estimation is not accurate. </span></span>
+<span id="cb623-2"><a href="optim.html#cb623-2"></a><span class="co"># this is reasonable because the sd estimate is only justified &quot;asymptotically&quot;. </span></span>
+<span id="cb623-3"><a href="optim.html#cb623-3"></a></span>
+<span id="cb623-4"><a href="optim.html#cb623-4"></a><span class="co">## test with another data set</span></span>
+<span id="cb623-5"><a href="optim.html#cb623-5"></a>pn2 &lt;-<span class="st"> </span><span class="kw">rpois</span> (<span class="dv">1000</span>, <span class="dt">lambda =</span> <span class="dv">20</span>)</span>
+<span id="cb623-6"><a href="optim.html#cb623-6"></a>low2 &lt;-<span class="st"> </span><span class="kw">pmax</span>(pn2 <span class="op">-</span><span class="st"> </span><span class="dv">50</span>, <span class="dv">0</span>)</span>
+<span id="cb623-7"><a href="optim.html#cb623-7"></a>high2 &lt;-<span class="st"> </span>pn2 <span class="op">+</span><span class="st"> </span><span class="dv">5</span></span>
+<span id="cb623-8"><a href="optim.html#cb623-8"></a><span class="kw">poisson_mle</span> (low2, high2)</span></code></pre></div>
+<pre><code>## $est
+## [1] 1.9504627749392247
+## 
+## $sd
+## [1] 349.45295548926424
+## 
+## $CI
+## [1] -682.97732998401875  686.87825553389712</code></pre>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="optim.html#cb625-1"></a><span class="co"># plot log like</span></span>
+<span id="cb625-2"><a href="optim.html#cb625-2"></a>lambdas &lt;-<span class="st"> </span><span class="kw">seq</span> (<span class="dv">0</span>, <span class="dv">50</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)</span>
+<span id="cb625-3"><a href="optim.html#cb625-3"></a>nl &lt;-<span class="st"> </span><span class="kw">length</span> (lambdas)</span>
+<span id="cb625-4"><a href="optim.html#cb625-4"></a>logp_lmd &lt;-<span class="st"> </span><span class="kw">rep</span> (<span class="dv">0</span>, nl)</span>
+<span id="cb625-5"><a href="optim.html#cb625-5"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nl)</span>
+<span id="cb625-6"><a href="optim.html#cb625-6"></a>{</span>
+<span id="cb625-7"><a href="optim.html#cb625-7"></a>    logp_lmd [i] &lt;-<span class="st"> </span><span class="kw">poisson_log_likelihood</span> (lambdas[i], low2, high2)</span>
+<span id="cb625-8"><a href="optim.html#cb625-8"></a>}</span>
+<span id="cb625-9"><a href="optim.html#cb625-9"></a></span>
+<span id="cb625-10"><a href="optim.html#cb625-10"></a><span class="co">## the reason that the estimate of sd is very bad is that </span></span>
+<span id="cb625-11"><a href="optim.html#cb625-11"></a><span class="co">## the log likelihood at MLE is very flat</span></span>
+<span id="cb625-12"><a href="optim.html#cb625-12"></a></span>
+<span id="cb625-13"><a href="optim.html#cb625-13"></a><span class="kw">plot</span> (lambdas, logp_lmd, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="optim.html#cb626-1"></a><span class="co"># plot log like of the first data set</span></span>
+<span id="cb626-2"><a href="optim.html#cb626-2"></a>lambdas &lt;-<span class="st"> </span><span class="kw">seq</span> (<span class="dv">0</span>, <span class="dv">50</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)</span>
+<span id="cb626-3"><a href="optim.html#cb626-3"></a>nl &lt;-<span class="st"> </span><span class="kw">length</span> (lambdas)</span>
+<span id="cb626-4"><a href="optim.html#cb626-4"></a>logp_lmd &lt;-<span class="st"> </span><span class="kw">rep</span> (<span class="dv">0</span>, nl)</span>
+<span id="cb626-5"><a href="optim.html#cb626-5"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nl)</span>
+<span id="cb626-6"><a href="optim.html#cb626-6"></a>{</span>
+<span id="cb626-7"><a href="optim.html#cb626-7"></a>    logp_lmd [i] &lt;-<span class="st"> </span><span class="kw">poisson_log_likelihood</span> (lambdas[i], low, high)</span>
+<span id="cb626-8"><a href="optim.html#cb626-8"></a>}</span>
+<span id="cb626-9"><a href="optim.html#cb626-9"></a><span class="kw">plot</span> (lambdas, logp_lmd, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
+<p><img src="prefresher_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+<p><a href="https://math.usask.ca/~longhai/teaching/2018/stat812/stat812.html" class="uri">https://math.usask.ca/~longhai/teaching/2018/stat812/stat812.html</a></p>
 
+</div>
 </div>
 </div>
 <div class="footnotes">

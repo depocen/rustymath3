@@ -4,24 +4,24 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Calculus | Math Prefresher for Political Scientists</title>
-  <meta name="description" content="Text for Harvard Department of Government Math Prefresher" />
+  <title>Chapter 3 Calculus | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</title>
+  <meta name="description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Calculus | Math Prefresher for Political Scientists" />
+  <meta property="og:title" content="Chapter 3 Calculus | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="./images/logo.png" />
-  <meta property="og:description" content="Text for Harvard Department of Government Math Prefresher" />
-  <meta name="github-repo" content="IQSS/prefresher" />
+  <meta property="og:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
+  <meta name="github-repo" content="Rusty Math 3" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Calculus | Math Prefresher for Political Scientists" />
+  <meta name="twitter:title" content="Chapter 3 Calculus | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   
-  <meta name="twitter:description" content="Text for Harvard Department of Government Math Prefresher" />
+  <meta name="twitter:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="twitter:image" content="./images/logo.png" />
 
-<meta name="author" content="" />
+<meta name="author" content="Nguyen Ngoc Anh" />
 
 
 
@@ -150,7 +150,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#limits"><i class="fa fa-check"></i>Limits</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#calculus"><i class="fa fa-check"></i>Calculus</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#optimization"><i class="fa fa-check"></i>Optimization</a></li>
-<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a></li>
+<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#graphics"><i class="fa fa-check"></i><b>0.0.1</b> Graphics</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>I Math</b></span></li>
 <li class="chapter" data-level="1" data-path="functions-and-operations.html"><a href="functions-and-operations.html"><i class="fa fa-check"></i><b>1</b> Functions and Operations</a><ul>
@@ -214,6 +216,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="optim.html"><a href="optim.html#inequality-constraints"><i class="fa fa-check"></i><b>4.6</b> Inequality Constraints</a></li>
 <li class="chapter" data-level="4.7" data-path="optim.html"><a href="optim.html#kuhn-tucker-conditions"><i class="fa fa-check"></i><b>4.7</b> Kuhn-Tucker Conditions</a></li>
 <li class="chapter" data-level="4.8" data-path="optim.html"><a href="optim.html#applications-of-quadratic-forms"><i class="fa fa-check"></i><b>4.8</b> Applications of Quadratic Forms</a></li>
+<li class="chapter" data-level="4.9" data-path="optim.html"><a href="optim.html#numerics-numerical-computation"><i class="fa fa-check"></i><b>4.9</b> Numerics / Numerical computation</a><ul>
+<li class="chapter" data-level="4.9.1" data-path="optim.html"><a href="optim.html#rounding-error"><i class="fa fa-check"></i><b>4.9.1</b> Rounding error</a></li>
+<li class="chapter" data-level="4.9.2" data-path="optim.html"><a href="optim.html#computing-exp-x-avoiding-computing-large---large"><i class="fa fa-check"></i><b>4.9.2</b> 1.2 Computing exp (x): avoiding computing large - large</a></li>
+<li class="chapter" data-level="4.9.3" data-path="optim.html"><a href="optim.html#univariate-optimization-for-mle"><i class="fa fa-check"></i><b>4.9.3</b> Univariate Optimization for MLE</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="probability-theory.html"><a href="probability-theory.html"><i class="fa fa-check"></i><b>5</b> Probability Theory</a><ul>
 <li class="chapter" data-level="5.1" data-path="probability-theory.html"><a href="probability-theory.html#counting-rules"><i class="fa fa-check"></i><b>5.1</b> Counting rules</a></li>
@@ -491,7 +498,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math Prefresher for Political Scientists</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</a>
           </h1>
         </div>
 
@@ -518,7 +525,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span> is its rate of change at <span class="math inline">\(x\)</span>: how much <span class="math inline">\(f(x)\)</span> changes with a change in <span class="math inline">\(x\)</span>. The rate of change is a fraction — rise over run — but because not all lines are straight and the rise over run formula will give us different values depending on the range we examine, we need to take a limit (Section <a href="limits-precalc.html#limits-precalc">2</a>).</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-15" class="definition"><strong>Definition 3.1  (Derivative)  </strong></span>Let <span class="math inline">\(f\)</span> be a function whose domain includes an open interval containing the point <span class="math inline">\(x\)</span>. The derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span> is given by</p>
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 3.1  (Derivative)  </strong></span>Let <span class="math inline">\(f\)</span> be a function whose domain includes an open interval containing the point <span class="math inline">\(x\)</span>. The derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span> is given by</p>
 <p><span class="math display">\[\frac{d}{dx}f(x) =\lim\limits_{h\to 0} \frac{f(x+h)-f(x)}{(x+h)-x} = \lim\limits_{h\to 0} \frac{f(x+h)-f(x)}{h}
 \]</span></p>
 <p>There are a two main ways to denote a derivate:</p>
@@ -601,7 +608,7 @@ For each of the following functions, find the first-order derivative <span class
 <p>Similarly, the derivative of <span class="math inline">\(f&#39;&#39;(x)\)</span> would be called the third derivative and is denoted <span class="math inline">\(f&#39;&#39;&#39;(x)\)</span>. And by extension, the <strong>nth derivative</strong> is expressed as <span class="math inline">\(\frac{d^n}{dx^n}f(x)\)</span>, <span class="math inline">\(\frac{d^ny}{dx^n}\)</span>.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-16" class="example"><strong>Example 3.1  (Succession of Derivatives)  </strong></span><span class="math display">\[\begin{align*}
+<span id="exm:unnamed-chunk-23" class="example"><strong>Example 3.1  (Succession of Derivatives)  </strong></span><span class="math display">\[\begin{align*}
 f(x) &amp;=x^3\\
 f^{\prime}(x) &amp;=3x^2\\
 f^{\prime\prime}(x) &amp;=6x \\
@@ -618,7 +625,7 @@ f^{\prime\prime\prime\prime}(x) &amp;=0\\
 <p><strong>Composite functions</strong> are formed by substituting one function into another and are denoted by <span class="math display">\[(f\circ g)(x)=f[g(x)].\]</span> To form <span class="math inline">\(f[g(x)]\)</span>, the range of <span class="math inline">\(g\)</span> must be contained (at least in part) within the domain of <span class="math inline">\(f\)</span>. The domain of <span class="math inline">\(f\circ g\)</span> consists of all the points in the domain of <span class="math inline">\(g\)</span> for which <span class="math inline">\(g(x)\)</span> is in the domain of <span class="math inline">\(f\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-17" class="example"><strong>Example 3.2  </strong></span>Let <span class="math inline">\(f(x)=\log x\)</span> for <span class="math inline">\(0&lt;x&lt;\infty\)</span> and <span class="math inline">\(g(x)=x^2\)</span> for <span class="math inline">\(-\infty&lt;x&lt;\infty\)</span>.</p>
+<p><span id="exm:unnamed-chunk-24" class="example"><strong>Example 3.2  </strong></span>Let <span class="math inline">\(f(x)=\log x\)</span> for <span class="math inline">\(0&lt;x&lt;\infty\)</span> and <span class="math inline">\(g(x)=x^2\)</span> for <span class="math inline">\(-\infty&lt;x&lt;\infty\)</span>.</p>
 <p>Then
 <span class="math display">\[(f\circ g)(x)=\log x^2, -\infty&lt;x&lt;\infty - \{0\}\]</span></p>
 <p>Also
@@ -748,7 +755,7 @@ y &amp;= a^x \\
 <p>We can take higher-order partial derivatives, like we did with functions of a single variable, except now the higher-order partials can be with respect to multiple variables.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-18" class="example"><strong>Example 3.6  (More than one type of partial)  </strong></span>Notice that you can take partials with regard to different variables.</p>
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 3.6  (More than one type of partial)  </strong></span>Notice that you can take partials with regard to different variables.</p>
 <p>Suppose <span class="math inline">\(f(x,y)=x^2+y^2\)</span>. Then</p>
 <span class="math display">\[\begin{align*}
 \frac{\partial f}{\partial x}(x,y) &amp;=\\
@@ -760,7 +767,7 @@ y &amp;= a^x \\
 
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-19" class="exercise"><strong>Exercise 3.2  </strong></span>Let <span class="math inline">\(f(x,y)=x^3 y^4 +e^x -\log y\)</span>. What are the following partial derivaitves?</p>
+<p><span id="exr:unnamed-chunk-26" class="exercise"><strong>Exercise 3.2  </strong></span>Let <span class="math inline">\(f(x,y)=x^3 y^4 +e^x -\log y\)</span>. What are the following partial derivaitves?</p>
 <p><span class="math display">\[\begin{align*}
 \frac{\partial f}{\partial x}(x,y) &amp;=\\
 \frac{\partial f}{\partial y}(x,y) &amp;=\\
@@ -792,7 +799,7 @@ giving us:</p>
 <p>So far, we’ve been interested in finding the derivative <span class="math inline">\(f=F&#39;\)</span> of a function <span class="math inline">\(F\)</span>. However, sometimes we’re interested in exactly the reverse: finding the function <span class="math inline">\(F\)</span> for which <span class="math inline">\(f\)</span> is its derivative. We refer to <span class="math inline">\(F\)</span> as the antiderivative of <span class="math inline">\(f\)</span>.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 3.2  (Antiderivative)  </strong></span>The antiverivative of a function <span class="math inline">\(f(x)\)</span> is a differentiable function <span class="math inline">\(F\)</span> whose derivative is <span class="math inline">\(f\)</span>.</p>
+<p><span id="def:unnamed-chunk-27" class="definition"><strong>Definition 3.2  (Antiderivative)  </strong></span>The antiverivative of a function <span class="math inline">\(f(x)\)</span> is a differentiable function <span class="math inline">\(F\)</span> whose derivative is <span class="math inline">\(f\)</span>.</p>
 <p><span class="math display">\[F^\prime = f.\]</span></p>
 </div>
 
@@ -800,7 +807,7 @@ giving us:</p>
 <p>This definition bolsters the main takeaway about integrals and derivatives: They are inverses of each other.</p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-21" class="exercise"><strong>Exercise 3.3  (Antiderivative)  </strong></span>Find the antiderivative of the following:</p>
+<p><span id="exr:unnamed-chunk-28" class="exercise"><strong>Exercise 3.3  (Antiderivative)  </strong></span>Find the antiderivative of the following:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x) = \frac{1}{x^2}\)</span></li>
 <li><span class="math inline">\(f(x) = 3e^{3x}\)</span></li>
@@ -810,14 +817,14 @@ giving us:</p>
 <p>We know from derivatives how to manipulate <span class="math inline">\(F\)</span> to get <span class="math inline">\(f\)</span>. But how do you express the procedure to manipulate <span class="math inline">\(f\)</span> to get <span class="math inline">\(F\)</span>? For that, we need a new symbol, which we will call indefinite integration.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 3.3  (Indefinite Integral)  </strong></span>The indefinite integral of <span class="math inline">\(f(x)\)</span> is written</p>
+<p><span id="def:unnamed-chunk-29" class="definition"><strong>Definition 3.3  (Indefinite Integral)  </strong></span>The indefinite integral of <span class="math inline">\(f(x)\)</span> is written</p>
 <p><span class="math display">\[\int f(x) dx \]</span></p>
 <p>and is equal to the antiderivative of <span class="math inline">\(f\)</span>.</p>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-23" class="example"><strong>Example 3.7  </strong></span>Draw the function <span class="math inline">\(f(x)\)</span> and its indefinite integral, <span class="math inline">\(\int\limits f(x) dx\)</span></p>
+<p><span id="exm:unnamed-chunk-30" class="example"><strong>Example 3.7  </strong></span>Draw the function <span class="math inline">\(f(x)\)</span> and its indefinite integral, <span class="math inline">\(\int\limits f(x) dx\)</span></p>
 <p><span class="math display">\[f(x) = (x^2-4)\]</span></p>
 </div>
 
@@ -849,7 +856,7 @@ Figure 3.4: The Many Indefinite Integrals of a Function
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 3.8  (Common Integration)  </strong></span>Simplify the following indefinite integrals:</p>
+<p><span id="exm:unnamed-chunk-32" class="example"><strong>Example 3.8  (Common Integration)  </strong></span>Simplify the following indefinite integrals:</p>
 <ul>
 <li><span class="math inline">\(\int 3x^2 dx\)</span></li>
 <li><span class="math inline">\(\int (2x+1)dx\)</span></li>
@@ -876,7 +883,7 @@ Figure 3.5: The Riemann Integral as a Sum of Evaluations
 <p>This is how we define the “Definite” Integral:</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-26" class="definition"><strong>Definition 3.4  (The Definite Integral (Riemann))  </strong></span>If for a given function <span class="math inline">\(f\)</span> the Riemann sum approaches a limit as <span class="math inline">\(\Delta x \to 0\)</span>, then that limit is called the Riemann integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>. We express this with the <span class="math inline">\(\int\)</span>, symbol, and write <span class="math display">\[\int\limits_a^b f(x) dx= \lim\limits_{\Delta x\to 0} \sum\limits_{i=1}^n f(x_i)\Delta x\]</span></p>
+<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definition 3.4  (The Definite Integral (Riemann))  </strong></span>If for a given function <span class="math inline">\(f\)</span> the Riemann sum approaches a limit as <span class="math inline">\(\Delta x \to 0\)</span>, then that limit is called the Riemann integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>. We express this with the <span class="math inline">\(\int\)</span>, symbol, and write <span class="math display">\[\int\limits_a^b f(x) dx= \lim\limits_{\Delta x\to 0} \sum\limits_{i=1}^n f(x_i)\Delta x\]</span></p>
 The most straightforward of a definite integral is the definite integral. That is, we read
 <span class="math display">\[\int\limits_a^b f(x) dx\]</span> as the definite integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> and we defined as the area under the “curve” <span class="math inline">\(f(x)\)</span> from point <span class="math inline">\(x=a\)</span> to <span class="math inline">\(x=b\)</span>.
 </div>
@@ -884,7 +891,7 @@ The most straightforward of a definite integral is the definite integral. That i
 <p>The fundamental theorem of calculus shows us that this sum is, in fact, the antiderivative.</p>
 
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-27" class="theorem"><strong>Theorem 3.2  (First Fundamental Theorem of Calculus)  </strong></span>Let the function <span class="math inline">\(f\)</span> be bounded on <span class="math inline">\([a,b]\)</span> and continuous on <span class="math inline">\((a,b)\)</span>. Then, suggestively, use the symbol <span class="math inline">\(F(x)\)</span> to denote the definite integral from <span class="math inline">\(a\)</span> to <span class="math inline">\(x\)</span>:
+<p><span id="thm:unnamed-chunk-34" class="theorem"><strong>Theorem 3.2  (First Fundamental Theorem of Calculus)  </strong></span>Let the function <span class="math inline">\(f\)</span> be bounded on <span class="math inline">\([a,b]\)</span> and continuous on <span class="math inline">\((a,b)\)</span>. Then, suggestively, use the symbol <span class="math inline">\(F(x)\)</span> to denote the definite integral from <span class="math inline">\(a\)</span> to <span class="math inline">\(x\)</span>:
 <span class="math display">\[F(x)=\int\limits_a^x f(t)dt, \quad a\le x\le b\]</span></p>
 <p>Then <span class="math inline">\(F(x)\)</span> has a derivative at each point in <span class="math inline">\((a,b)\)</span> and <span class="math display">\[F^\prime(x)=f(x), \quad a&lt;x&lt;b\]</span>
 That is, the definite integral function of <span class="math inline">\(f\)</span> <em>is</em> the one of the antiderivatives of some <span class="math inline">\(f\)</span>.</p>
@@ -894,7 +901,7 @@ That is, the definite integral function of <span class="math inline">\(f\)</span
 <p>The second theorem gives us a simple way of computing a definite integral as a function of indefinite integrals.</p>
 
 <div class="theorem">
-<span id="thm:unnamed-chunk-28" class="theorem"><strong>Theorem 3.3  (Second Fundamental Theorem of Calculus)  </strong></span>Let the function <span class="math inline">\(f\)</span> be bounded on <span class="math inline">\([a,b]\)</span> and continuous on <span class="math inline">\((a,b)\)</span>. Let <span class="math inline">\(F\)</span> be any function that is continuous on <span class="math inline">\([a,b]\)</span> such that <span class="math inline">\(F^\prime(x)=f(x)\)</span> on <span class="math inline">\((a,b)\)</span>. Then <span class="math display">\[\int\limits_a^bf(x)dx = F(b)-F(a)\]</span>
+<span id="thm:unnamed-chunk-35" class="theorem"><strong>Theorem 3.3  (Second Fundamental Theorem of Calculus)  </strong></span>Let the function <span class="math inline">\(f\)</span> be bounded on <span class="math inline">\([a,b]\)</span> and continuous on <span class="math inline">\((a,b)\)</span>. Let <span class="math inline">\(F\)</span> be any function that is continuous on <span class="math inline">\([a,b]\)</span> such that <span class="math inline">\(F^\prime(x)=f(x)\)</span> on <span class="math inline">\((a,b)\)</span>. Then <span class="math display">\[\int\limits_a^bf(x)dx = F(b)-F(a)\]</span>
 </div>
 
 <p>So the procedure to calculate a simple definite integral <span class="math inline">\(\int\limits_a^b f(x)dx\)</span> is then</p>
@@ -910,7 +917,7 @@ That is, the definite integral function of <span class="math inline">\(f\)</span
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-29" class="exercise"><strong>Exercise 3.4  </strong></span>What is the value of <span class="math inline">\(\int\limits_{-2}^2 e^x e^{e^x} dx\)</span>?
+<span id="exr:unnamed-chunk-36" class="exercise"><strong>Exercise 3.4  </strong></span>What is the value of <span class="math inline">\(\int\limits_{-2}^2 e^x e^{e^x} dx\)</span>?
 </div>
 
 <div id="common-rules-for-definite-integrals" class="section level3 unnumbered">
@@ -924,7 +931,7 @@ That is, the definite integral function of <span class="math inline">\(f\)</span
 </ol>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-30" class="exercise"><strong>Exercise 3.5  (Definite integral shortcuts)  </strong></span>Simplify the following definite intergrals.</p>
+<p><span id="exr:unnamed-chunk-37" class="exercise"><strong>Exercise 3.5  (Definite integral shortcuts)  </strong></span>Simplify the following definite intergrals.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\int\limits_1^1 3x^2 dx =\)</span></li>
 <li><span class="math inline">\(\int\limits_0^4 (2x+1)dx=\)</span></li>
@@ -972,7 +979,7 @@ Solve the indefinite integral <span class="math display">\[\int x^2 \sqrt{x+1}dx
 <p>Our goal here is to find expressions for <span class="math inline">\(u\)</span> and <span class="math inline">\(dv\)</span> that, when substituted into the above equation, yield an expression that’s more easily evaluated.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-31" class="example"><strong>Example 3.12  (Integration by Parts)  </strong></span>Simplify the following integrals. These seemingly obscure forms of integrals come up often when integrating distributions.</p>
+<p><span id="exm:unnamed-chunk-38" class="example"><strong>Example 3.12  (Integration by Parts)  </strong></span>Simplify the following integrals. These seemingly obscure forms of integrals come up often when integrating distributions.</p>
 <span class="math display">\[\int x e^{ax} dx\]</span>
 </div>
 

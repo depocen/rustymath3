@@ -1,0 +1,12 @@
+# Python in Rmarkdown
+
+```{r}
+
+library(reticulate)
+``` 
+
+
+```
+print("hello")
+```
+

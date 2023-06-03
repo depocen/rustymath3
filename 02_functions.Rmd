@@ -285,7 +285,8 @@ Simplify each of the following logarithms. By "simplify", we actually really mea
 ```
 
 
-## Graphing Functions
+## Graphing Functions  
+
 What can a graph tell you about a function?
 
 * Is the function increasing or decreasing?  Over what part of the domain?
@@ -297,6 +298,34 @@ What can a graph tell you about a function?
 * Does the function tend to some limit?
 * Other questions related to the substance of the problem at hand.
 
+
+https://dtkaplan.github.io/RforCalculus/graphing-functions.html 
+
+https://thomasleeper.com/Rcourse/Tutorials/curve.html 
+
+http://www.countbio.com/web_pages/left_object/R_for_biology/R_fundamentals/curve_to_function_R.html
+
+
+In plotting a function, you need to specify several things:
+
+    What is the function. This is usually given by an expression, for instance m * x + b or A * x ^ 2 or sin(2 * t) Later on, you will also give names to functions and use those names in the expressions, much like sin is the name of a trigonometric function.
+    What are the inputs. Remember, there’s no reason to assume that x
+
+is always the input, and you’ll be using variables with names like G and cAMP. So you have to be explicit in saying what’s an input and what’s not. The R notation for this involves the ~ (“tilde”) symbol. For instance, to specify a linear function with x
+
+    as the input, you can write m * x + b ~ x
+    What range of inputs to make the plot over. Think of this as the bounds of the horizontal axis over which you want to make the plot.
+    The values of any parameters. Remember, the notation m * x + b ~ x involves not just the variable input x but also two other quantities, m and b. To make a plot of the function, you need to pick specific values for m and b and tell the computer what these are.
+
+There are three graphing functions in {mosaicCalc} that enable you to graph functions, and to layer those plots with graphs of other functions or data. These are:
+
+    slice_plot() for functions of one variable.
+    contour_plot() for functions of two variables.
+    interactive_plot() which produces an HTML widget for interacting with functions of two variables.
+
+All three are used in very much the same way. Here’s an example of plotting out a straight-line function:
+
+https://statisticsglobe.com/draw-plot-of-function-curve-in-r#example-2-plotting-function-curve-using-ggplot2-package  
 
 ## Solving for Variables and Finding Roots
 	
@@ -326,6 +355,42 @@ Multiple Roots:
 
 __Quadratic Formula:__ For quadratic equations $ax^2+bx+c=0$, use the quadratic formula: $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 	
+
+https://bookdown.org/jemlevesley11/calculusandanalysis/numbers.html#solving-equations
+
+In the next frame you will see how to plot the function y=x2−2 using computational tool R. This has become one of the main tools used in industry today, and you should consider developing it in your degree to help the range of jobs you can do.
+
+```{r}
+f <- function(x) {
+  x^2 - 2
+}
+
+g <-function(x){ 
+  0*x
+}
+
+  x <- seq(0,3,0.1)
+  plot(x,f(x),main="f(x)=x^2-2",
+ylab="f(x)",
+type="l",
+col="blue",
+)
+  lines(x,g(x),col="red")
+```
+
+
+
+### Complex numbers
+
+In order to solve `differential equations` later we are going to need some new numbers, the complex numbers.
+
+They are an invaluable tool in the scientists tool bag, and we give a quick introduction here. The starting point is to have have a square root of −1 because this allows us to solve the equation $x^2+1=0$. Now you might say that this is just not possible and no such number “really” exists. In what sense does the solution of $x^2−2$ exist? These are interesting philosophical questions. 
+
+It exists because we have just defined it. This number is called i. The engineers often call it j so don’t get upset if you see this in some texts. The number i is referred to as imaginary, but this term was originally used by Descartes in a disparaging way.
+
+
+
+
 
 
 ```{exercise, name = "Finding Roots", solvevar1}

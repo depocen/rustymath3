@@ -4,24 +4,24 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Probability Theory | Math Prefresher for Political Scientists</title>
-  <meta name="description" content="Text for Harvard Department of Government Math Prefresher" />
+  <title>Chapter 5 Probability Theory | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</title>
+  <meta name="description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Probability Theory | Math Prefresher for Political Scientists" />
+  <meta property="og:title" content="Chapter 5 Probability Theory | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="./images/logo.png" />
-  <meta property="og:description" content="Text for Harvard Department of Government Math Prefresher" />
-  <meta name="github-repo" content="IQSS/prefresher" />
+  <meta property="og:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
+  <meta name="github-repo" content="Rusty Math 3" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Probability Theory | Math Prefresher for Political Scientists" />
+  <meta name="twitter:title" content="Chapter 5 Probability Theory | Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences" />
   
-  <meta name="twitter:description" content="Text for Harvard Department of Government Math Prefresher" />
+  <meta name="twitter:description" content="Text modelled on for Harvard Department of Government Math Prefresher" />
   <meta name="twitter:image" content="./images/logo.png" />
 
-<meta name="author" content="" />
+<meta name="author" content="Nguyen Ngoc Anh" />
 
 
 
@@ -150,7 +150,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#limits"><i class="fa fa-check"></i>Limits</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#calculus"><i class="fa fa-check"></i>Calculus</a></li>
 <li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#optimization"><i class="fa fa-check"></i>Optimization</a></li>
-<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a></li>
+<li class="chapter" data-level="" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#probability"><i class="fa fa-check"></i>Probability</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="pre-prefresher-exercises.html"><a href="pre-prefresher-exercises.html#graphics"><i class="fa fa-check"></i><b>0.0.1</b> Graphics</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>I Math</b></span></li>
 <li class="chapter" data-level="1" data-path="functions-and-operations.html"><a href="functions-and-operations.html"><i class="fa fa-check"></i><b>1</b> Functions and Operations</a><ul>
@@ -214,6 +216,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="optim.html"><a href="optim.html#inequality-constraints"><i class="fa fa-check"></i><b>4.6</b> Inequality Constraints</a></li>
 <li class="chapter" data-level="4.7" data-path="optim.html"><a href="optim.html#kuhn-tucker-conditions"><i class="fa fa-check"></i><b>4.7</b> Kuhn-Tucker Conditions</a></li>
 <li class="chapter" data-level="4.8" data-path="optim.html"><a href="optim.html#applications-of-quadratic-forms"><i class="fa fa-check"></i><b>4.8</b> Applications of Quadratic Forms</a></li>
+<li class="chapter" data-level="4.9" data-path="optim.html"><a href="optim.html#numerics-numerical-computation"><i class="fa fa-check"></i><b>4.9</b> Numerics / Numerical computation</a><ul>
+<li class="chapter" data-level="4.9.1" data-path="optim.html"><a href="optim.html#rounding-error"><i class="fa fa-check"></i><b>4.9.1</b> Rounding error</a></li>
+<li class="chapter" data-level="4.9.2" data-path="optim.html"><a href="optim.html#computing-exp-x-avoiding-computing-large---large"><i class="fa fa-check"></i><b>4.9.2</b> 1.2 Computing exp (x): avoiding computing large - large</a></li>
+<li class="chapter" data-level="4.9.3" data-path="optim.html"><a href="optim.html#univariate-optimization-for-mle"><i class="fa fa-check"></i><b>4.9.3</b> Univariate Optimization for MLE</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="probability-theory.html"><a href="probability-theory.html"><i class="fa fa-check"></i><b>5</b> Probability Theory</a><ul>
 <li class="chapter" data-level="5.1" data-path="probability-theory.html"><a href="probability-theory.html#counting-rules"><i class="fa fa-check"></i><b>5.1</b> Counting rules</a></li>
@@ -491,7 +498,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math Prefresher for Political Scientists</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathemathics and Statistics Bootcamp for Econonmics and Social Sciences</a>
           </h1>
         </div>
 
@@ -613,14 +620,14 @@ Figure 5.1: Probablity as a Measure<a href="#fn3" class="footnote-ref" id="fnref
 <p>Formally,</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-66" class="definition"><strong>Definition 5.1  (Probability)  </strong></span>
+<p><span id="def:unnamed-chunk-91" class="definition"><strong>Definition 5.1  (Probability)  </strong></span>
 Probability is a function that maps events to a real number, obeying the axioms of probability.</p>
 </div>
 
 <p>The axioms of probability make sure that the separate events add up in terms of probability, and – for standardization purposes – that they add up to 1.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-67" class="definition"><strong>Definition 5.2  (Axioms of Probability)  </strong></span></p>
+<p><span id="def:unnamed-chunk-92" class="definition"><strong>Definition 5.2  (Axioms of Probability)  </strong></span></p>
 <ol style="list-style-type: decimal">
 <li>For any event <span class="math inline">\(A\)</span>, <span class="math inline">\(P(A)\ge 0\)</span>.</li>
 <li><span class="math inline">\(P(S)=1\)</span></li>
@@ -722,7 +729,7 @@ A six-sided die is rolled. What is the probability of a 1, given the outcome is 
 <p>You could rearrange the fraction to highlight how a joint probability could be expressed as the product of a conditional probability.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-68" class="definition"><strong>Definition 5.3  (Multiplicative Law of Probability)  </strong></span>
+<p><span id="def:unnamed-chunk-93" class="definition"><strong>Definition 5.3  (Multiplicative Law of Probability)  </strong></span>
 The probability of the intersection of two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(P(A\cap B)=P(A)P(B|A)=P(B)P(A|B)\)</span> which follows directly from the definition of conditional probability. More generally,</p>
 <p><span class="math display">\[P(A_1\cap \cdots\cap A_k) = P(A_k| A_{k-1}\cap \cdots \cap A_1)\times P(A_{k-1}|A_{k-2}\cap \cdots A_1) \times \ldots \times P(A_2|A_1)\times P(A_1)\]</span></p>
 <p>Sometimes it is easier to calculate these conditional probabilities and sum them than it is to calculate <span class="math inline">\(P(A)\)</span> directly.</p>
@@ -730,7 +737,7 @@ The probability of the intersection of two events <span class="math inline">\(A\
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-69" class="definition"><strong>Definition 5.4  (Law of Total Probability)  </strong></span>Let <span class="math inline">\(S\)</span> be the sample space of some experiment and let the disjoint <span class="math inline">\(k\)</span> events <span class="math inline">\(B_1,\ldots,B_k\)</span> partition <span class="math inline">\(S\)</span>, such that <span class="math inline">\(P(B_1\cup ... \cup B_k) = P(S) = 1\)</span>. If <span class="math inline">\(A\)</span> is some other event in <span class="math inline">\(S\)</span>, then the events <span class="math inline">\(A\cap B_1, A\cap B_2, \ldots, A\cap B_k\)</span> will form a partition of <span class="math inline">\(A\)</span> and we can write <span class="math inline">\(A\)</span> as <span class="math display">\[A=(A\cap B_1)\cup\cdots\cup (A\cap B_k)\]</span>.</p>
+<p><span id="def:unnamed-chunk-94" class="definition"><strong>Definition 5.4  (Law of Total Probability)  </strong></span>Let <span class="math inline">\(S\)</span> be the sample space of some experiment and let the disjoint <span class="math inline">\(k\)</span> events <span class="math inline">\(B_1,\ldots,B_k\)</span> partition <span class="math inline">\(S\)</span>, such that <span class="math inline">\(P(B_1\cup ... \cup B_k) = P(S) = 1\)</span>. If <span class="math inline">\(A\)</span> is some other event in <span class="math inline">\(S\)</span>, then the events <span class="math inline">\(A\cap B_1, A\cap B_2, \ldots, A\cap B_k\)</span> will form a partition of <span class="math inline">\(A\)</span> and we can write <span class="math inline">\(A\)</span> as <span class="math display">\[A=(A\cap B_1)\cup\cdots\cup (A\cap B_k)\]</span>.</p>
 <p>Since the <span class="math inline">\(k\)</span> events are disjoint,</p>
 <p><span class="math display">\[\begin{eqnarray*}
 P(A)&amp;=&amp;\sum\limits_{i=1}^k P(A \cap B_i)\\
@@ -761,7 +768,7 @@ In a given town, 40% of the voters are Democrat and 60% are Republican. The pres
 <h2><span class="header-section-number">5.5</span> Independence</h2>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-70" class="definition"><strong>Definition 5.5  (Independence)  </strong></span> If the occurrence or nonoccurrence of either events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no effect on the occurrence or nonoccurrence of the other, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent.</p>
+<p><span id="def:unnamed-chunk-95" class="definition"><strong>Definition 5.5  (Independence)  </strong></span> If the occurrence or nonoccurrence of either events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no effect on the occurrence or nonoccurrence of the other, then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent.</p>
 </div>
 
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, then</p>
@@ -794,7 +801,7 @@ Figure 5.2: The Random Variable as a Real-Valued Function
 </div>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-71" class="definition"><strong>Definition 5.6  (Random Variable)  </strong></span>
+<p><span id="def:unnamed-chunk-96" class="definition"><strong>Definition 5.6  (Random Variable)  </strong></span>
 A random variable is a measurable function <span class="math inline">\(X\)</span> that maps from the sample space <span class="math inline">\(S\)</span> to the set of real numbers <span class="math inline">\(R.\)</span> It assigns a real number to every outcome <span class="math inline">\(s \in S\)</span>.</p>
 </div>
 
@@ -811,13 +818,13 @@ A random variable is a measurable function <span class="math inline">\(X\)</span
 <p>The concept of distributions is the natural bridge between these two concepts.</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-72" class="definition"><strong>Definition 5.7  (Distribution of a random variable)  </strong></span>A distribution of a random variable is a function that specifies the probabilities of all events associated with that random variable. There are several types of distributions: A probability mass function for a discrete random variable and probability density function for a continuous random variable.
+<span id="def:unnamed-chunk-97" class="definition"><strong>Definition 5.7  (Distribution of a random variable)  </strong></span>A distribution of a random variable is a function that specifies the probabilities of all events associated with that random variable. There are several types of distributions: A probability mass function for a discrete random variable and probability density function for a continuous random variable.
 </div>
 
 <p>Notice how the definition of distributions combines two ideas of random variables and probabilities of events. First, the distribution considers a random variable, call it <span class="math inline">\(X\)</span>. <span class="math inline">\(X\)</span> can take a number of possible numeric values.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-73" class="example"><strong>Example 5.8  (Total Number of Occurrences)  </strong></span>
+<p><span id="exm:unnamed-chunk-98" class="example"><strong>Example 5.8  (Total Number of Occurrences)  </strong></span>
 Consider three binary outcomes, one for each patient recovering from a disease: <span class="math inline">\(R_i\)</span> denotes the event in which patient <span class="math inline">\(i\)</span> (<span class="math inline">\(i = 1, 2, 3\)</span>) recovers from a disease. <span class="math inline">\(R_1\)</span>, <span class="math inline">\(R_2\)</span>, and <span class="math inline">\(R_3\)</span>. How would we represent the total number of people who end up recovering from the disease?</p>
 </div>
 
@@ -833,13 +840,13 @@ Consider three binary outcomes, one for each patient recovering from a disease: 
 <p>The formal definition of a random variable is easier to given by separating out two cases: discrete random variables when the numeric summaries of the events are discrete, and continuous random variables when they are continuous.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-75" class="definition"><strong>Definition 5.8  (Discrete Random Variable)  </strong></span><span class="math inline">\(X\)</span> is a discrete random variable if it can assume only a finite or countably infinite number of distinct values. Examples: number of wars per year, heads or tails.</p>
+<p><span id="def:unnamed-chunk-100" class="definition"><strong>Definition 5.8  (Discrete Random Variable)  </strong></span><span class="math inline">\(X\)</span> is a discrete random variable if it can assume only a finite or countably infinite number of distinct values. Examples: number of wars per year, heads or tails.</p>
 </div>
 
 <p>The distribution of a discrete r.v. is a PMF:</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-76" class="definition"><strong>Definition 5.9  (Probability Mass Function)  </strong></span>
+<p><span id="def:unnamed-chunk-101" class="definition"><strong>Definition 5.9  (Probability Mass Function)  </strong></span>
 For a discrete random variable <span class="math inline">\(X\)</span>, the probability mass function (Also referred to simply as the “probability distribution.”) (PMF), <span class="math inline">\(p(x)=P(X=x)\)</span>, assigns probabilities to a countable number of distinct <span class="math inline">\(x\)</span> values such that</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(0\le p(x)\le 1\)</span></li>
@@ -859,7 +866,7 @@ For a discrete random variable <span class="math inline">\(X\)</span>, the proba
 <p>Note that <span class="math inline">\(P(X &gt; x) = 1 - P(X \le x)\)</span>.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-77" class="example"><strong>Example 5.9  </strong></span>For a fair die with its value as <span class="math inline">\(Y\)</span>, What are the following?</p>
+<p><span id="exm:unnamed-chunk-102" class="example"><strong>Example 5.9  </strong></span>For a fair die with its value as <span class="math inline">\(Y\)</span>, What are the following?</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(P(Y\le 1)\)</span></li>
 <li><span class="math inline">\(P(Y\le 3)\)</span></li>
@@ -873,13 +880,13 @@ For a discrete random variable <span class="math inline">\(X\)</span>, the proba
 <p>We also have a similar definition for <em>continuous</em> random variables.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-78" class="definition"><strong>Definition 5.10  (Continuous Random Variable)  </strong></span>
+<p><span id="def:unnamed-chunk-103" class="definition"><strong>Definition 5.10  (Continuous Random Variable)  </strong></span>
 <span class="math inline">\(X\)</span> is a continuous random variable if there exists a nonnegative function <span class="math inline">\(f(x)\)</span> defined for all real <span class="math inline">\(x\in (-\infty,\infty)\)</span>, such that for any interval <span class="math inline">\(A\)</span>, <span class="math inline">\(P(X\in A)=\int\limits_A f(x)dx\)</span>. Examples: age, income, GNP, temperature.</p>
 </div>
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-79" class="definition"><strong>Definition 5.11  (Probability Density Function)  </strong></span>
+<p><span id="def:unnamed-chunk-104" class="definition"><strong>Definition 5.11  (Probability Density Function)  </strong></span>
 The function <span class="math inline">\(f\)</span> above is called the probability density function (pdf) of <span class="math inline">\(X\)</span> and must satisfy
 <span class="math display">\[f(x)\ge 0\]</span>
 <span class="math display">\[\int\limits_{-\infty}^\infty f(x)dx=1\]</span></p>
@@ -890,7 +897,7 @@ Note also that <span class="math inline">\(P(X = x)=0\)</span> — i.e., the pro
 <p>For both discrete and continuous random variables, we have a unifying concept of another measure: the cumulative distribution:</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-80" class="definition"><strong>Definition 5.12  (Cumulative Density Function)  </strong></span>Because the probability that a continuous random variable will assume any particular value is zero, we can only make statements about the probability of a continuous random variable being within an interval. The cumulative distribution gives the probability that <span class="math inline">\(Y\)</span> lies on the interval <span class="math inline">\((-\infty,y)\)</span> and is defined as <span class="math display">\[F(x)=P(X\le x)=\int\limits_{-\infty}^x f(s)ds\]</span> Note that <span class="math inline">\(F(x)\)</span> has similar properties with continuous distributions as it does with discrete - non-decreasing, continuous (not just right-continuous), and <span class="math inline">\(\lim\limits_{x \to -\infty} F(x) = 0\)</span> and <span class="math inline">\(\lim\limits_{x \to \infty} F(x) = 1\)</span>.</p>
+<p><span id="def:unnamed-chunk-105" class="definition"><strong>Definition 5.12  (Cumulative Density Function)  </strong></span>Because the probability that a continuous random variable will assume any particular value is zero, we can only make statements about the probability of a continuous random variable being within an interval. The cumulative distribution gives the probability that <span class="math inline">\(Y\)</span> lies on the interval <span class="math inline">\((-\infty,y)\)</span> and is defined as <span class="math display">\[F(x)=P(X\le x)=\int\limits_{-\infty}^x f(s)ds\]</span> Note that <span class="math inline">\(F(x)\)</span> has similar properties with continuous distributions as it does with discrete - non-decreasing, continuous (not just right-continuous), and <span class="math inline">\(\lim\limits_{x \to -\infty} F(x) = 0\)</span> and <span class="math inline">\(\lim\limits_{x \to \infty} F(x) = 1\)</span>.</p>
 </div>
 
 <p>We can also make statements about the probability of <span class="math inline">\(Y\)</span> falling in an interval <span class="math inline">\(a\le y\le b\)</span>.
@@ -898,7 +905,7 @@ Note also that <span class="math inline">\(P(X = x)=0\)</span> — i.e., the pro
 <p>The PDF and CDF are linked by the integral: The CDF of the integral of the PDF: <span class="math display">\[f(x) = F&#39;(x)=\frac{dF(x)}{dx}\]</span></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-81" class="example"><strong>Example 5.10  </strong></span>
+<p><span id="exm:unnamed-chunk-106" class="example"><strong>Example 5.10  </strong></span>
 For <span class="math inline">\(f(y)=1, \quad 0&lt;y&lt;1\)</span>, find: (1) The CDF <span class="math inline">\(F(y)\)</span> and (2) The probability <span class="math inline">\(P(0.5&lt;y&lt;0.75)\)</span>.</p>
 </div>
 
@@ -928,7 +935,7 @@ For <span class="math inline">\(f(y)=1, \quad 0&lt;y&lt;1\)</span>, find: (1) Th
 </ul>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-82" class="exercise"><strong>Exercise 5.5  (Discrete Outcomes)  </strong></span>Suppose we are interested in the outcomes of flipping a coin and rolling a 6-sided die at the same time. The sample space for this process contains 12 elements: <span class="math display">\[\{(H, 1), (H, 2), (H, 3), (H, 4), (H, 5), (H, 6), (T, 1), (T, 2), (T, 3), (T, 4), (T, 5), (T, 6)\}\]</span> We can define two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> such that <span class="math inline">\(X = 1\)</span> if heads and <span class="math inline">\(X = 0\)</span> if tails, while <span class="math inline">\(Y\)</span> equals the number on the die.</p>
+<p><span id="exr:unnamed-chunk-107" class="exercise"><strong>Exercise 5.5  (Discrete Outcomes)  </strong></span>Suppose we are interested in the outcomes of flipping a coin and rolling a 6-sided die at the same time. The sample space for this process contains 12 elements: <span class="math display">\[\{(H, 1), (H, 2), (H, 3), (H, 4), (H, 5), (H, 6), (T, 1), (T, 2), (T, 3), (T, 4), (T, 5), (T, 6)\}\]</span> We can define two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> such that <span class="math inline">\(X = 1\)</span> if heads and <span class="math inline">\(X = 0\)</span> if tails, while <span class="math inline">\(Y\)</span> equals the number on the die.</p>
 <p>We can then make statements about the joint distribution of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. What are the following?</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(P(X=x)\)</span></li>
@@ -945,7 +952,7 @@ For <span class="math inline">\(f(y)=1, \quad 0&lt;y&lt;1\)</span>, find: (1) Th
 <p>We often want to summarize some characteristics of the distribution of a random variable. The most important summary is the expectation (or expected value, or mean), in which the possible values of a random variable are weighted by their probabilities.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-83" class="definition"><strong>Definition 5.13  (Expectation of a Discrete Random Variable)  </strong></span>The expected value of a discrete random variable <span class="math inline">\(Y\)</span> is <span class="math display">\[E(Y)=\sum\limits_{y} y P(Y=y)= \sum\limits_{y} y p(y)\]</span><br />
+<p><span id="def:unnamed-chunk-108" class="definition"><strong>Definition 5.13  (Expectation of a Discrete Random Variable)  </strong></span>The expected value of a discrete random variable <span class="math inline">\(Y\)</span> is <span class="math display">\[E(Y)=\sum\limits_{y} y P(Y=y)= \sum\limits_{y} y p(y)\]</span><br />
 In words, it is the weighted average of all possible values of <span class="math inline">\(Y\)</span>, weighted by the probability that <span class="math inline">\(y\)</span> occurs. It is not necessarily the number we would expect <span class="math inline">\(Y\)</span> to take on, but the average value of <span class="math inline">\(Y\)</span> after a large number of repetitions of an experiment.</p>
 </div>
 
@@ -999,7 +1006,7 @@ Hence, the expected value of the continuous variable <span class="math inline">\
 <p>We can also look at other summaries of the distribution, which build on the idea of taking expectations. Variance tells us about the “spread” of the distribution; it is the expected value of the squared deviations from the mean of the distribution. The standard deviation is simply the square root of the variance.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-84" class="definition"><strong>Definition 5.14  (Variance)  </strong></span>The Variance of a Random Variable <span class="math inline">\(Y\)</span> is</p>
+<p><span id="def:unnamed-chunk-109" class="definition"><strong>Definition 5.14  (Variance)  </strong></span>The Variance of a Random Variable <span class="math inline">\(Y\)</span> is</p>
 <p><span class="math display">\[\text{Var}(Y) = E[(Y - E(Y))^2] =  E(Y^2)-[E(Y)]^2\]</span></p>
 <p>The Standard Deviation is the square root of the variance : <span class="math display">\[SD(Y) = \sigma_Y= \sqrt{\text{Var}(Y)}\]</span></p>
 </div>
@@ -1019,7 +1026,7 @@ Hence, the expected value of the continuous variable <span class="math inline">\
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-85" class="definition"><strong>Definition 5.15  (Covariance and Correlation)  </strong></span>
+<p><span id="def:unnamed-chunk-110" class="definition"><strong>Definition 5.15  (Covariance and Correlation)  </strong></span>
 The covariance measures the degree to which two random variables vary together; if the covariance between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is positive, X tends to be larger than its mean when Y is larger than its mean.</p>
 <p><span class="math display">\[\text{Cov}(X,Y) = E[(X - E(X))(Y - E(Y))] \]</span>
 We can also write this as</p>
@@ -1034,7 +1041,7 @@ We can also write this as</p>
 <p>The Covariance is unfortunately hard to interpret in magnitude. The correlation is a standardized version of the covariance, and always ranges from -1 to 1.</p>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-86" class="definition"><strong>Definition 5.16  (Correlation)  </strong></span>The correlation coefficient is the covariance divided by the standard deviations of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. It is a unitless measure and always takes on values in the interval <span class="math inline">\([-1,1]\)</span>.</p>
+<p><span id="def:unnamed-chunk-111" class="definition"><strong>Definition 5.16  (Correlation)  </strong></span>The correlation coefficient is the covariance divided by the standard deviations of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. It is a unitless measure and always takes on values in the interval <span class="math inline">\([-1,1]\)</span>.</p>
 <p><span class="math display">\[\text{Corr}(X, Y) = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}} = \frac{\text{Cov}(X,Y)}{SD(X)SD(Y)}\]</span></p>
 </div>
 
@@ -1107,13 +1114,13 @@ Suppose we have a PMF with the following characteristics:
 <p>Two <em>discrete</em> distributions used often are:</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-87" class="definition"><strong>Definition 5.17  (Binomial Distribution)  </strong></span><span class="math inline">\(Y\)</span> is distributed binomial if it represents the number of “successes” observed in <span class="math inline">\(n\)</span> independent, identical “trials,” where the probability of success in any trial is <span class="math inline">\(p\)</span> and the probability of failure is <span class="math inline">\(q=1-p\)</span>.
+<span id="def:unnamed-chunk-112" class="definition"><strong>Definition 5.17  (Binomial Distribution)  </strong></span><span class="math inline">\(Y\)</span> is distributed binomial if it represents the number of “successes” observed in <span class="math inline">\(n\)</span> independent, identical “trials,” where the probability of success in any trial is <span class="math inline">\(p\)</span> and the probability of failure is <span class="math inline">\(q=1-p\)</span>.
 </div>
 
 <p>For any particular sequence of <span class="math inline">\(y\)</span> successes and <span class="math inline">\(n-y\)</span> failures, the probability of obtaining that sequence is <span class="math inline">\(p^y q^{n-y}\)</span> (by the multiplicative law and independence). However, there are <span class="math inline">\(\binom{n}{y}=\frac{n!}{(n-y)!y!}\)</span> ways of obtaining a sequence with <span class="math inline">\(y\)</span> successes and <span class="math inline">\(n-y\)</span> failures. So the binomial distribution is given by <span class="math display">\[p(y)=\binom{n}{y}p^y q^{n-y}, \quad y=0,1,2,\ldots,n\]</span> with mean <span class="math inline">\(\mu=E(Y)=np\)</span> and variance <span class="math inline">\(\sigma^2=\text{Var}(Y)=npq\)</span>.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-88" class="example"><strong>Example 5.14  </strong></span>Republicans vote for Democrat-sponsored bills 2% of the time. What is the probability that out of 10 Republicans questioned, half voted for a particular Democrat-sponsored bill? What is the mean number of Republicans voting for Democrat-sponsored bills? The variance?
+<span id="exm:unnamed-chunk-113" class="example"><strong>Example 5.14  </strong></span>Republicans vote for Democrat-sponsored bills 2% of the time. What is the probability that out of 10 Republicans questioned, half voted for a particular Democrat-sponsored bill? What is the mean number of Republicans voting for Democrat-sponsored bills? The variance?
 1. <span class="math inline">\(P(Y=5)=\)</span>
 1. <span class="math inline">\(E(Y)=\)</span>
 1. <span class="math inline">\(\text{Var}(Y)=6\)</span>
@@ -1122,26 +1129,26 @@ Suppose we have a PMF with the following characteristics:
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-89" class="definition"><strong>Definition 5.18  (Poisson Distribution)  </strong></span>A random variable <span class="math inline">\(Y\)</span> has a Poisson distribution if</p>
+<p><span id="def:unnamed-chunk-114" class="definition"><strong>Definition 5.18  (Poisson Distribution)  </strong></span>A random variable <span class="math inline">\(Y\)</span> has a Poisson distribution if</p>
 <p><span class="math display">\[P(Y = y)=\frac{\lambda^y}{y!}e^{-\lambda}, \quad y=0,1,2,\ldots, \quad \lambda&gt;0\]</span></p>
 <p>The Poisson has the unusual feature that its expectation equals its variance: <span class="math inline">\(E(Y)=\text{Var}(Y)=\lambda\)</span>. The Poisson distribution is often used to model rare event counts: counts of the number of events that occur during some unit of time. <span class="math inline">\(\lambda\)</span> is often called the “arrival rate.”</p>
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-90" class="example"><strong>Example 5.15  </strong></span>Border disputes occur between two countries through a Poisson Distribution, at a rate of 2 per month. What is the probability of 0, 2, and less than 5 disputes occurring in a month?
+<span id="exm:unnamed-chunk-115" class="example"><strong>Example 5.15  </strong></span>Border disputes occur between two countries through a Poisson Distribution, at a rate of 2 per month. What is the probability of 0, 2, and less than 5 disputes occurring in a month?
 </div>
 
 
 <p>Two <em>continuous</em> distributions used often are:</p>
 
 <div class="definition">
-<span id="def:unnamed-chunk-91" class="definition"><strong>Definition 5.19  (Uniform Distribution)  </strong></span>A random variable <span class="math inline">\(Y\)</span> has a continuous uniform distribution on the interval <span class="math inline">\((\alpha,\beta)\)</span> if its density is given by <span class="math display">\[f(y)=\frac{1}{\beta-\alpha}, \quad \alpha\le y\le \beta\]</span> The mean and variance of <span class="math inline">\(Y\)</span> are <span class="math inline">\(E(Y)=\frac{\alpha+\beta}{2}\)</span> and <span class="math inline">\(\text{Var}(Y)=\frac{(\beta-\alpha)^2}{12}\)</span>.
+<span id="def:unnamed-chunk-116" class="definition"><strong>Definition 5.19  (Uniform Distribution)  </strong></span>A random variable <span class="math inline">\(Y\)</span> has a continuous uniform distribution on the interval <span class="math inline">\((\alpha,\beta)\)</span> if its density is given by <span class="math display">\[f(y)=\frac{1}{\beta-\alpha}, \quad \alpha\le y\le \beta\]</span> The mean and variance of <span class="math inline">\(Y\)</span> are <span class="math inline">\(E(Y)=\frac{\alpha+\beta}{2}\)</span> and <span class="math inline">\(\text{Var}(Y)=\frac{(\beta-\alpha)^2}{12}\)</span>.
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-92" class="example"><strong>Example 5.16  </strong></span>For <span class="math inline">\(Y\)</span> uniformly distributed over <span class="math inline">\((1,3)\)</span>, what are the following probabilities?</p>
+<p><span id="exm:unnamed-chunk-117" class="example"><strong>Example 5.16  </strong></span>For <span class="math inline">\(Y\)</span> uniformly distributed over <span class="math inline">\((1,3)\)</span>, what are the following probabilities?</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(P(Y=2)\)</span></li>
 <li>Its density evaluated at 2, or <span class="math inline">\(f(2)\)</span></li>
@@ -1153,7 +1160,7 @@ Suppose we have a PMF with the following characteristics:
 
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-93" class="definition"><strong>Definition 5.20  (Normal Distribution)  </strong></span>
+<p><span id="def:unnamed-chunk-118" class="definition"><strong>Definition 5.20  (Normal Distribution)  </strong></span>
 A random variable <span class="math inline">\(Y\)</span> is normally distributed with mean <span class="math inline">\(E(Y)=\mu\)</span> and variance <span class="math inline">\(\text{Var}(Y)=\sigma^2\)</span> if its density is</p>
 <p><span class="math display">\[f(y)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y-\mu)^2}{2\sigma^2}}\]</span></p>
 </div>
@@ -1187,7 +1194,7 @@ The sample mean is an <em>estimate</em> of the expected value of a distribution.
 </ol>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-94" class="example"><strong>Example 5.17  </strong></span>Example: Using the above table, calculate the sample versions of:</p>
+<p><span id="exm:unnamed-chunk-119" class="example"><strong>Example 5.17  </strong></span>Example: Using the above table, calculate the sample versions of:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Cov}(X,Y)\)</span></li>
 <li><span class="math inline">\(\text{Corr}(X, Y)\)</span></li>

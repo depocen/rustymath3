@@ -1,9 +1,4 @@
-# Pre-Prefresher Exercises {-}
-
-
-Before our first meeting, please try solving these questions. They are a sample of the very beginning of each math section. We have provided links to the parts of the book you can read if the concepts are new to you. 
-
-The goal of this "pre"-prefresher assignment is not to intimidate you but to set common expectations so you can make the most out of the actual Prefresher. Even if you do not understand some or all of these questions after skimming through the linked sections, your effort will pay off and you will be better prepared for the math prefresher. We are also open to adjusting these expectations based on feedback (this class is for _you_), so please do not hesitate to write to the instructors for feedback. 
+# R and All that {-}
 
 
 
@@ -167,5 +162,1341 @@ If you are stuck, please try sketching out a picture of each of the functions.
 4. If we roll two fair dice, what is the probability that their sum would be 12?
 
 
-For a review, please see Sections \@ref(setoper) - \@ref(probdef).
+For a review, please see Sections \@ref(setoper) - \@ref(probdef). 
 
+
+http://www.ynufe.edu.cn/pub/tsxy/jhzhao/teach/CS/compt_stat.htm  
+
+
+
+```{r}
+
+
+## ----Getting Started with R----------------------------------------------
+1/sqrt(2*pi) * exp(-2)
+dnorm(2)
+
+## ------------------------------------------------------------------------
+seq(0, 3, 0.5)
+x <- seq(0, 3, 0.5)
+
+ 
+
+## ----eval=FALSE----------------------------------------------------------
+## help ( density )
+## # copy and paste the lines below from the help page
+## # The Old Faithful geyser data
+## d <- density ( faithful $ eruptions , bw = "sj")
+## d
+## plot (d)
+
+## ----Functions-----------------------------------------------------------
+sumdice <- function (n) {
+  k <- sample (1:6 , size =n, replace = TRUE )
+  return (sum (k))
+}
+
+## ------------------------------------------------------------------------
+sumdice (2) #to print the result at the console
+a <- sumdice (100) #to store the result rather than print it
+a / 100 #we expect the mean for 100 dice to be close to 3.5
+
+## ------------------------------------------------------------------------
+sumdice <- function (n)
+  sum ( sample (1:6 , size =n, replace = TRUE ))
+
+## ------------------------------------------------------------------------
+sumdice <- function (n, sides = 6) {
+  if ( sides < 1) return (0)
+  k <- sample (1: sides , size =n, replace = TRUE )
+  return (sum (k))
+}
+sumdice (5) # default 6 sides
+sumdice (n=5, sides =4) #4 sides
+
+## ----Data Frame----------------------------------------------------------
+names ( iris )
+table ( iris $ Species )
+w <- iris [[2]] # Sepal . Width
+mean (w)
+
+## ------------------------------------------------------------------------
+attach(iris)
+summary ( Petal.Length [51:100]) # versicolor petal length
+with(iris, summary(Petal.Length[51:100]))
+
+## ------------------------------------------------------------------------
+by(iris[,1:4],Species,colMeans)
+
+## ----Arrays--------------------------------------------------------------
+x <- 1:24 # vector
+dim(x) <- length(x) # 1 dimensional array
+matrix(1:24, nrow=4, ncol=6) # 4 by 6 matrix
+x <- array(1:24, c(3, 4, 2))
+
+## ----Example 1.3, A: 2 × 2 zero matrix-----------------------------------
+A <- matrix (0, nrow =2, ncol =2)
+A <- matrix (c(0, 0, 0, 0), nrow =2, ncol =2)
+A <- matrix (0, 2, 2)
+
+## ------------------------------------------------------------------------
+A <- matrix (1:8 , nrow =2, ncol =4)
+
+## ------------------------------------------------------------------------
+x <- as.matrix ( iris [ ,1:4]) # all rows of columns 1 to 4
+mean (x[ ,2]) # mean of sepal width , all species
+mean (x [51:100 ,3]) # mean of petal length , versicolor
+
+## ----Convert matrix to a three dimensional array-------------------------
+y <- array (x, dim=c(50 , 3, 4))
+mean (y[ , ,2]) # mean of sepal width , all species
+mean (y[ ,2 ,3]) # mean of petal length , versicolor
+
+y <- array (c(x[1:50 ,] , x [51:100 ,] , x [101:150 ,]) , dim=c(50 , 4, 3))
+mean (y[ ,2 ,]) # mean of sepal width , all species
+mean (y[ ,3 ,2]) # mean of petal length , versicolor
+
+## ----Lists---------------------------------------------------------------
+w <- wilcox.test ( rnorm (10) , rnorm (10 , 2))
+w # print the summary
+w$statistic #stored in object w
+w$p.value
+
+## ----Example 1.6 (A list of names)---------------------------------------
+a <- matrix ( runif (8) , 4, 2) #a 4x2 matrix
+dimnames (a) <- list (NULL , c("x", "y"))
+a
+# if we want row names
+dimnames (a) <- list ( letters [1:4] , c("x", "y"))
+a
+
+# another way to assign row names
+row.names (a) <- list ("NE", "NW", "SW", "SE")
+a
+
+## ----Reading Data from External Files------------------------------------
+ 
+
+## ----Graphics,eval=FALSE-------------------------------------------------
+## plot.new() #if a plot is not open
+## legend(locator(1),as.character(0:25),pch=0:25)#display symbol types
+## #then click to locate the legend
+## legend(locator(1),as.character(0:25),pch=0:25)#display line types
+## legend(locator(1),as.character(0:8),lwd=20,col=0:8)#display color
+
+## ----Other colors and color palettes,eval=FALSE--------------------------
+## plot.new()
+## palette(rainbow(15))
+## legend(locator(1), as.character(1:15), lwd=15, col=1:15)
+
+
+```
+
+```{r}
+########################################
+##R Programming Session 1
+#########################################
+
+##data entry from keyboard
+
+ages <- c(30, 40, 55, 46, 57)
+ages
+##input data from spreadsheet
+
+mydata <- read.csv("data/chickwt.csv")
+summary(mydata)
+
+##statistical summaries
+
+mean(mydata$weight)
+
+var(mydata$weight)
+
+##modelling. Note the outer parentheses which tell R
+##to print the result as well as storing it
+
+(mylm <- lm(weight ~ feed, mydata))
+
+##graphical
+
+plot(density(mydata$weight))
+
+plot(mylm)
+
+boxplot(len ~ dose, data = ToothGrowth,
+        boxwex = 0.25, at = 1:3 - 0.2,
+        subset = supp == "VC", col = "yellow",
+        main = "Guinea Pigs' Tooth Growth",
+        xlab = "Vitamin C dose mg",
+        ylab = "tooth length",
+        xlim = c(0.5, 3.5), ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, data = ToothGrowth, add = TRUE,
+        boxwex = 0.25, at = 1:3 + 0.2,
+        subset = supp == "OJ", col = "orange")
+legend(2, 9, c("Ascorbic acid", "Orange juice"),
+       fill = c("yellow", "orange"))
+
+## new functions
+
+mycolMeans <- colMeans
+fix(mycolMeans)
+#############
+mymat <- data.matrix(mydata)
+mymat[70, 1] <- NA
+mycolMeans(mymat)
+colMeans(mymat)
+colMeans(mymat, na.rm=TRUE)
+##help
+
+ 
+## A brief demo
+
+2 + 3
+
+x <- 2 + 3
+
+exp(-4 * 4 / 2) / sqrt(2 * pi)
+
+dnorm(4, 0, 1) ## or dnorm(0, 4, 1)
+
+##introductory session
+
+library("MASS")
+ 
+
+x <- rnorm(1000)
+y <- rnorm(1000)
+truehist(c(x, y + 3), nbins=25)
+##save objects
+y <- 3
+save(x, y, file = "xy.RData")
+save.image()
+load("xy.RData")
+##packages
+
+library("car")
+
+```
+  
+
+```{r}
+##############################################################
+##R Programming Session 2
+###############################################################
+
+x <- seq(0, 0.5, 0.1) ##generate a sequence from 0 to 0.5 in steps of 0.1
+x ##Look at x
+##is x equal to (0, 0.1, 0.2, 0.3, 0.4, 0.5)?
+##To find out, type
+x == c(0, 0.1, 0.2, 0.3, 0.4, 0.5)
+
+##
+
+myvar <- function(x) (sum(x^2) - length(x) * mean(x)^2) / (length(x) - 1)
+x <- seq(1:100)
+myvar(x)
+var(x)
+x <- seq(1:100) + 10000000000
+myvar(x)
+var(x)
+##
+##
+### Inf, NaN
+
+as.numeric(c("a", "1"))
+x / 0
+log(-x)
+#######
+
+age <- runif(100) * 50
+table(cut(age, c(0, 10, 20, 30, 40, 50)))
+
+##why is this different from that on the slide?
+##data.frame
+## copy the file from the webpage to the folder where you are running R
+
+head(mydata <- read.csv("data/chickwt.csv"))
+
+##list
+################
+Empl <- list(employee = "Anna", spouse = "Fred",
+children = 3, child.ages = c(4, 7, 9))
+
+Empl
+Empl[[1]]
+Empl$spouse
+
+Empl[[4]]
+#Empl[[2:4]] 
+## note the error message in previous
+length(Empl[[4]])
+ls()
+str(Empl)
+
+########################
+##operators
+#############
+3^2
+10 %% 3
+10 %/% 3
+
+a <- matrix(1:4, nrow=2)
+b <- matrix(c(2, 1, 2, 4), nrow=2)
+a %*% b
+###########################
+x <- c(1, 2, 3, 4)
+y <- c(5, 6)
+x + 3
+#(4,5,6,7) and
+x + y
+#(6,8,8,10)
+
+#### logical operators
+
+x <- c(TRUE, FALSE, TRUE)
+y <- c(FALSE, TRUE, TRUE)
+
+x | y
+x || y
+
+x & y
+x && y
+
+################
+
+myDate <- as.Date('10-Jan-1993', format="%d-%b-%Y")
+
+class(myDate)
+as.numeric(myDate)
+
+##############
+
+## making vectors
+c(1, "a")
+seq(1, 10, by=2)# gives (1, 3, 5, 7, 9)
+rep(c(1, 2), times=3) #gives (1, 2, 1, 2, 1, 2)
+rep(c(1, 2), each=3) #gives (1, 1, 1, 2, 2, 2)
+rep(c(1, 2), c(2, 3)) #gives (1, 1, 2, 2, 2)
+##
+
+paste(c(1, 2), c('x', 'y', 'z'))
+paste(c(1, 2), c('x', 'y', 'z'), collapse=' ')
+
+sort(mydata$weight)
+sort(mydata$weight, decreasing=TRUE)
+
+table(rpois(20, 5))
+
+```
+
+
+```{r}
+#########################################################
+##R Programming Session 3
+##########################################################
+mydata <- read.csv('data/chickwt.csv')
+summary(mydata)
+mydata <- read.csv("data/chickwt.csv",
+				   as.is=TRUE)
+summary(mydata)
+mydata[, 2] <- factor(mydata[, 2])
+summary(mydata)
+
+mydata <- read.csv("data/chickwt2.csv")
+summary(mydata)
+mydata[, 2] <- factor(mydata[, 2])
+summary(mydata)
+
+(mymat <- matrix(1:12, 3, 4))
+##Entries go down columns unless you
+##specify byrow=TRUE.
+mymat <- matrix(1:12, 3, 4, byrow=TRUE)
+mymat
+dim(mymat) #
+
+myarr <- mymat
+dim(myarr) <- c(3, 2, 2)
+myarr[, , 1]
+
+### indexing vectore
+x <- c(2, 4, 6, 8, 10, 12)
+names(x) <-
+	c("E1", "E2","E3", "E4", "E5", "E6")
+x[c(1, 3, 6, 5)]  #2, 6, 12, 10
+use <- c(rep(TRUE, 3), FALSE, TRUE, FALSE)
+x[use] ##will give 2, 4, 6, 10
+x[-c(1:3)] #will give 8, 10, 12
+x[c("E1", "E3")]
+x[] <- 0
+
+##recycling, extending, extracting outside
+x[c(1, 3)] <- 4.5
+x[10] <- 8
+x[11]
+x
+### indexing matrices and arrays
+
+mymat[1:2, -2]
+mymat[1:2, 1] #is a vector
+
+mymat[1:2, 1, drop=FALSE] # is a matrix
+
+mymat[mymat > 1] <- NA
+mymat <- matrix(1:12, 3, 4)
+
+(mysub <- cbind(rep(1, 3), 2:4))
+mymat[mysub] <- 2:4
+mymat
+mymat <- matrix(1:12, 3, 4)
+
+mydata <- read.csv('data/chickwt.csv')
+
+mydata[1:2, 1] #is a vector
+mydata[1, 1:2] #is a data.frame
+class(mydata[1:2, 1])
+class(mydata[1, 1:2])
+mydata[mydata$weight > 400,]
+
+##functions
+x <- rnorm(100, mean=0.3, sd=1.2)
+std.dev <- function(x) sqrt(var(x))
+t.test.p <- function(x, mu=0)
+{
+    n <- length(x)
+    t <- sqrt(n) * (mean(x) - mu) /
+		std.dev(x)
+    2 * (1 - pt(abs(t), n - 1))
+}
+
+std.dev(x)
+t.test.p(x)
+t.test.p(mu=1, x=x)
+t.test.p(x, 1)
+
+myfn <- function(n=100)
+{
+    tmp <- rep(NA, 3)
+    tmp[1] <- mean(runif(n))
+    tmp[2] <- mean(runif(n))
+    tmp[3] <- mean(runif(n))
+    mean(tmp[tmp > .2])
+}
+set.seed(1)
+myfn()
+myfn(1000)
+
+myfna <- function(n=100)
+{
+    tmp <- rep(NA, 3)
+    x <- mean(runif(n))
+    if (x > 0.2)
+        tmp[1] <- x
+    x <- mean(runif(n))
+    if (x > 0.2)
+        tmp[2] <- x
+    x <- mean(runif(n))
+    if (x > 0.2)
+        tmp[3] <- x
+    mean(tmp, na.rm=TRUE)
+}
+set.seed(1)
+myfna()
+myfna(1000)
+myfn1 <- function(obs=10, n=100)
+{
+    x <- rep(NA, n)
+    for (i in 1:n)
+    {
+        tmp <- runif(obs)
+        x[i] <- mean(tmp)
+    }
+    c(mn=mean(x), std=sd(x))
+}
+set.seed(1)
+myfn1()
+myfn1(1000)
+
+myfn2 <- function(obs=10)
+{
+    x <- runif(obs)
+    while(mean(x) < 0.45)
+    {
+        obs <- 2 * obs
+        x <- runif(obs)
+    }
+    list(mn=mean(x), std=sd(x), obs=obs)
+}
+
+myfn3 <- function(obs=10)
+{
+    repeat
+    {
+        x <- runif(obs)
+        if (mean(x) >= 0.45)
+            break
+        obs <- 2*obs
+    }
+    list(mn=mean(x), std=sd(x), obs=obs)
+}
+
+set.seed(1)
+myfn2()
+set.seed(1)
+myfn3()
+myfn3(20)
+
+####
+x <- c(0, 1, 1, 2)
+y <- c(44, 45, 56, 77)
+
+z <- rep(NA, 4)
+for (i in 1:length(x))
+{
+    if (x[i] > 0)
+        z[i] <- y[i] / x[i]
+    else
+        z[i] <- y[i] / 99
+}
+z
+#or
+(z <- ifelse(x > 0, y / x, y / 99))
+##
+#######
+mylist <- list(x=x, y=y, mymat=mymat)
+lapply(mylist, length)
+## note length of a matrix
+sapply(mylist, length)
+
+apply(mymat, 2, sum, na.rm=TRUE)
+###tapply
+tapply(mydata$weight, mydata$feed, mean)
+by(mydata[, 'weight'], mydata$feed, mean)
+(mylist <- split(mydata, mydata$feed))
+
+par(mfrow=c(2,3))
+tmp <- mapply(function(x, y) hist(x$weight,
+						   main = y),
+	   mylist, names(mylist))
+##
+
+cbind(c(1, 2, 3), c(4, 5, 6))
+rbind(c(1, 2, 3), c(4, 5, 6))
+df1 <- mylist[[1]][, c(2, 1)]
+df2 <- mylist[[2]]
+rbind(df1, df2)
+cbind(df1[1:10, ], df2)
+
+###########
+##merge#
+
+
+authors <- data.frame(
+    surname = I(c("Tukey", "Venables",
+	"Tierney", "Ripley", "McNeil")),
+    nationality = c("US", "Australia",
+	"US", "UK", "Australia"),
+    deceased = c("yes", rep("no", 4)))
+books <- data.frame(
+    name = I(c("Tukey", "Venables",
+	"Tierney", "Ripley", "Ripley",
+	"McNeil", "R Core")),
+    title = c("Exploratory Data Analysis",
+              "Modern Applied Statistics ...",
+	"LISP-STAT", "Spatial Statistics",
+	"Stochastic Simulation",
+              "Interactive Data Analysis",
+              "An Introduction to R"),
+    other.author = c(NA, "Ripley", NA, NA,
+	NA, NA, "Venables & Smith"))
+
+(m1 <- merge(authors, books,
+			 by.x = "surname",
+			 by.y = "name"))
+(m2 <- merge(books, authors,
+			 by.x = "name",
+			 by.y = "surname"))
+## "R core" is missing from authors and
+## appears only here :
+merge(authors, books, by.x = "surname",
+	  by.y = "name", all = TRUE)
+##matrices
+mymat <- matrix(1:12, nrow=3, )
+mymat
+mymat2 <- matrix(1:12, nrow=3, byrow=TRUE)
+mymat2
+mymat + mymat2
+mymat %*% t(mymat2)
+
+mysq <- matrix(rnorm(9), nrow=3)
+solve(mysq)
+
+mysym <- mysq
+mysym[lower.tri(mysym)] <-
+	mysym[upper.tri(mysym)]
+eigen(mysym)
+colSums(mymat)
+
+```
+
+### Graphics
+
+```{r}
+###################################################################
+## R Programming Session 4
+##################################################################
+x <- 1:10
+y <- x^2
+plot(y)
+plot(list(x=x, y=y))
+plot(cbind(x, y))
+plot(sin, -pi, pi)
+xy <- data.frame(a=x, b=y)
+plot(b ~ a, data=xy)
+plot(b ~ a, data=xy, type='p')
+plot(b ~ a, data=xy, type='l')
+plot(b ~ a, data=xy, type='b')
+plot(b ~ a, data=xy, type='o')
+plot(b ~ a, data=xy, type='h')
+plot(b ~ a, data=xy, type='s')
+
+#########################
+###plot demo 4.1
+#########################
+par(mfrow=c(2, 2)) ## sets up screen for four plots
+
+plot(cars)
+lines(lowess(cars)) ###add lines
+
+plot(sin, -pi, 2*pi)
+
+## Discrete Distribution Plot:
+plot(table(rpois(100, 5)), type = "h", col = "red", lwd=10, lend=1,
+     main="rpois(100, lambda=5)")## colour, line width, type, title
+
+## Simple quantiles/ECDF, see ecdf() {library(stats)} for a better one:
+plot(x <- sort(rnorm(47)), type = "s", main = "plot(x, type = \"s\")")
+points(x, cex = .5, col = "dark red") ##add points, cex
+
+###############################
+##legends demo 4.2
+###############################
+par(mfrow=c(1, 1))
+
+## right-justifying a set of labels: thanks to Uwe Ligges
+x <- 1:5; y1 <- 1 / x; y2 <- 2 / x
+plot(rep(x, 2), c(y1, y2), type="n", xlab="x", ylab="y")
+lines(x, y1); lines(x, y2, lty=2)
+temp <- legend("topright", legend = c(" ", " "),
+               text.width = strwidth("1,000,000"),
+               lty = 1:2, xjust = 1, yjust = 1,
+               title = "Line Types")
+text(temp$rect$left + temp$rect$w, temp$text$y,
+     c("1,000", "1,000,000"), pos=2)
+###################
+## or use locator() for top left corner (note change of xjust parameter
+## to get left corner)
+###################
+plot(rep(x, 2), c(y1, y2), type="n", xlab="x", ylab="y")
+lines(x, y1); lines(x, y2, lty=2)
+ 
+
+
+#########################
+##other types of plots: demo 4.3
+#########################
+VADeaths
+barplot(VADeaths, beside = TRUE,
+        col = c("lightblue", "mistyrose", "lightcyan",
+                "lavender", "cornsilk"),
+        legend = rownames(VADeaths), ylim = c(0, 100))
+#############################
+boxplot(len ~ dose, data = ToothGrowth,
+        boxwex = 0.25, at = 1:3 - 0.2,
+        subset = supp == "VC", col = "yellow",
+        main = "Guinea Pigs' Tooth Growth",
+        xlab = "Vitamin C dose mg",
+        ylab = "tooth length",
+        xlim = c(0.5, 3.5), ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, data = ToothGrowth, add = TRUE,
+        boxwex = 0.25, at = 1:3 + 0.2,
+        subset = supp == "OJ", col = "orange")
+legend(2, 9, c("Ascorbic acid", "Orange juice"),
+       fill = c("yellow", "orange"))
+ 
+
+#########################
+## basic lattice plots demo 4.5
+########################
+library(lattice)
+library(MASS)
+xyplot(time ~ dist, data=hills)
+
+bwplot(voice.part ~ height, data=singer, xlab="Height (inches)")
+
+stripplot(voice.part ~ jitter(height), data = singer, aspect = 1,
+          jitter = TRUE, xlab = "Height (inches)")
+
+## basic - note type 'b' is different in lattice
+xyplot(Time ~ Viscosity, data = stormer, groups = Wt, type = "b")
+
+########################
+## panel functions demo 4.6
+########################
+xyplot(time ~ dist, data=hills,
+panel=function(x, y, ...){
+         panel.xyplot(x, y, ...)
+         panel.lmline(x, y, type='l')
+     })
+
+xyplot(time ~ dist, data=hills,
+panel=function(x, y, ...){
+         panel.xyplot(x, y, ...)
+         panel.lmline(x, y, type='l')
+          panel.abline(lqs(y ~ x), lty=3)
+    })
+
+xyplot(time ~ dist, data=hills,
+	   panel=function(x, y, ...){
+		   panel.xyplot(x, y, ...)
+		   panel.lmline(x, y, type='l')
+		   panel.abline(lqs(y ~ x), lty=3)
+		 ##  panel.identify(x, y, row.names(hills))
+	   })
+##note the axes used to appear when the identify() finished.
+## 2012: this code does not work at this time, so rework the example
+## 2013: still not working
+trellis.focus("panel", 1, 1)
+panel.identify(hills$dist, hills$time, row.names(hills))
+
+#################################
+#####conditioning demo 4.7
+##############################
+##conditioning with factor
+bwplot(Age ~ Days | Sex * Lrn, data = quine)
+
+##conditioning with a shingle
+## Fertility is a standardized fertility measure
+## Education: percentage beyond primary school of army draftees
+## Catholic: percentage Catholic as opposed to Protestant (c.1888)
+## Examine relationship between Fertility and Education
+Cath <- equal.count(swiss$Catholic)
+xyplot(Fertility ~ Education | Cath, data=swiss)
+
+#################################
+#####conditioning demo 4.8
+##############################
+
+##alter the strip labels
+##quine: Days absent from school
+## Age group Primary (F0), F1, F2, F3
+## Lrn Average or slow
+bwplot(Age ~ Days | Sex * Lrn, data = quine, strip=strip.custom(style=2))
+
+## and specify the layout
+## yield in bushels per acre for 10 varieties at six sites in each of 2 yrs
+barchart(yield ~ variety | site, data = barley,
+         groups = year, layout = c(1, 6),
+         ylab = "Barley Yield (bushels/acre)",
+         scales = list(x = list(abbreviate = TRUE,
+                       minlength = 5)))
+
+###################################
+### Keys demo 4.9
+###################################
+
+
+## Note Multiple variables in formula for grouped displays. See also 4.11
+##auto.key
+xyplot(Sepal.Length + Sepal.Width ~ Petal.Length + Petal.Width | Species,
+       data = iris, scales = "free", layout = c(2, 2),
+       auto.key = list(x = .6, y = .7, corner = c(0, 0)))
+
+## time for cylinder to rotate fixed nbr times in response to wt, known visc
+xyplot(Time ~ Viscosity, data = stormer, groups = Wt, type = "b",auto.key=TRUE)
+
+##simplekey
+mylabels<-paste(c("Weight:   ", "", ""), unique(stormer$Wt), "gms")
+ xyplot(Time ~ Viscosity, data = stormer, groups = Wt, type = "b",
+    key = simpleKey(columns = 3, text=mylabels))
+
+
+##alter the character and customize the key
+sps <- trellis.par.get("superpose.symbol")
+sps$pch <- 1:7
+trellis.par.set("superpose.symbol", sps)
+xyplot(Time ~ Viscosity, data = stormer, groups = Wt, type = "b",
+ key = list(columns = 3, text = list(paste(c("Weight:   ", "", ""),
+        unique(stormer$Wt), "gms")),
+        points = Rows(sps, 1:3)
+ )
+)
+
+##################################
+###multiple plots on one screen demo 4.10
+###################################
+
+plot1 <- xyplot(dist ~ speed, cars)
+
+plot2 <- xyplot(sin(x)~x, data=data.frame(x=seq(-pi, 2 * pi, length=100)),
+                type='l')
+
+## Discrete Distribution Plot:
+tmp <- table(rpois(100, 5))
+plot3 <- xyplot(as.vector(tmp) ~ as.numeric(names(tmp)), type = "h",
+                col = "red", lwd=10,
+                main="rpois(100, lambda=5)")## colour, line width, type, title
+
+## Simple quantiles/ECDF, see ecdf() {library(stats)} for a better one:
+x <- sort(rnorm(47))
+plot4 <- xyplot(x ~ 1:47, type = "s", main = "plot(x, type = \"s\")",
+       panel=function(x, y){
+       panel.xyplot(x, y, type='s')
+   panel.xyplot(x, y, type='p', cex=0.5, col='dark red')})
+
+###layout
+
+print(plot1, newpage=TRUE, position=c(0, .5, .5, 1), more=TRUE)
+print(plot2, position=c(.5, .5, 1, 1), more=TRUE)
+print(plot3, position=c(0, 0, .5, .5), more=TRUE)
+print(plot4, position=c(.5, 0, 1, .5))
+##or
+print(plot1, newpage=TRUE, split=c(1, 1, 2, 2), more=TRUE)
+print(plot2, split=c(2, 1, 2, 2), more=TRUE)
+print(plot3, split=c(1, 2, 2, 2), more=TRUE)
+print(plot4, split=c(2, 2, 2, 2))
+
+############################################
+### Extended formula interface: demo 4.11
+###########################################
+## multiple plots against a factor
+stripplot(type ~ RI + Na + Mg + Al + Si + K + Ca + Ba + Fe,
+outer=TRUE, data=fgl, scales=list(x="free"), xlab="", cex=0.5)
+stripplot(type ~ RI + Na + Mg + Al + Si + K + Ca + Ba + Fe,
+outer=FALSE, data=fgl, scales=list(x="free"), xlab="", cex=0.5)
+## parallel time series
+deathdf <- data.frame(mdeaths, fdeaths)
+xyplot(fdeaths + mdeaths ~ 1:72, deathdf, type="l")
+xyplot(fdeaths + mdeaths ~ 1:72, deathdf, type="l", outer=TRUE)
+## easier way than this?
+deathdf2 <- data.frame(deaths=c(mdeaths, fdeaths), obs=rep(1:72, 2),
+					   gender=rep(c("m", "f"), each=72))
+xyplot(deaths ~ obs, deathdf2, type="l", groups=gender)
+## or this: remove the ts class, then reshape?
+deathdf3 <- data.frame(mdeaths=as.vector(mdeaths), fdeaths=as.vector(fdeaths))
+deathdf3 <- reshape(deathdf3, direction="long", varying=list(1:2))
+xyplot(mdeaths ~ id, deathdf3, type="l", groups=time)
+
+############################################
+### Example code
+###########################################
+xyplot(dist ~ speed, cars)
+
+bwplot(count ~ spray, InsectSprays,
+  xlab='Type of Spray',
+  ylab='Number of Insects',
+  main='Insect Spray Data')
+
+xyplot(mpg ~ disp, groups=cyl, data=mtcars,
+     xlab='Displacement (cu in.)',
+     ylab='Miles/(US)gallon',
+     main='Car Road Tests Data',
+     auto.key=TRUE)
+
+xyplot(mpg ~ disp, groups=cyl, data=mtcars,
+       key=simpleKey(text=unique(as.character(mtcars$cyl)), columns=3))
+###########################################################
+##update examples
+Depth <- equal.count(quakes$depth)
+
+(tmp <- xyplot(lat ~ long | Depth, data = quakes))
+(tmp <- update(tmp,
+       strip = strip.custom(strip.names = TRUE, strip.levels = TRUE),
+       aspect = "iso"))
+
+xyplot(time ~ dist, data=hills)
+trellis.focus("panel", 1, 1)
+panel.identify(hills$dist, hills$time, row.names(hills))
+
+```
+
+#### Character data
+
+```{r}
+########################################
+##R Programming Session 6
+#########################################
+
+##lengths of strings
+
+length("")
+
+vv <- c("abcd", "def", "k")
+##create an empty character vector
+vv0 <- vv[vv == "g"]
+
+##length versus nchar
+
+length(vv)
+
+length(vv[1])
+
+length((vv0))
+
+nchar(vv[1])
+
+nchar(vv)
+
+nchar(vv0)
+
+##special characters
+
+a <- 'The aunt\'s pen'
+b <- "The aunt's pen"
+a
+b
+a == b
+
+vspecial <- "A \t tab"
+print(vspecial)
+cat(vspecial)
+nchar(vspecial)
+
+##paste
+paste(c("X", "Y"), 1:4, sep="")
+paste(c("X", "Y"), 1:4, sep="", collapse=" + ")
+
+##substr, substring
+
+substr("abcdef", 2, 4)
+substring("abcdef", 2, 4)
+
+substring("abcdef", 1:6, 1:6)
+substr("abcdef", 1:6, 1:6) # vector arguments longer than length of string
+# are ignored
+
+substr(rep("abcdef", 4), 1:4, 4:5)
+
+rep("abcdef", 4)
+cbind(1:4, 4:5)
+
+x <- c("asfef", "yuiop[", "b", "stuff.blah.yech")
+substr(x, 2, 5) ## note results where index is not present
+
+substring(x, 2, 4:6) ## uses recycling
+
+substring(x, 2) <- c("..", "+++")
+x
+##note default final argument to substring is 1000000
+##only portion of replacement string is replaced.
+
+
+##example of strsplit
+x <- c(as="asfef", qu="qwerty", "yuiop[", "b",
+    "stuff.blah.yech")
+strsplit(x, "e")  # split x on the letter e
+
+##example of match
+match(1:10, c(1, 3, 5, 9))
+
+1:10 %in% c(1, 3, 5, 9)
+pmatch("", "")                # NA
+pmatch("m", c("mean", "median", "mode")) # NA
+pmatch("med", c("mean", "median", "mode"))# 2
+charmatch("", "")                     #1
+charmatch("m", c("mean", "median", "mode"))#0
+charmatch("med", c("mean", "median", "mode"))#2
+charmatch("x", c("mean", "median", "mode"))# NA
+
+##duplicates
+pmatch(c("", "ab", "ab"), c("abc", "ab"), dup=FALSE)
+pmatch(c("", "ab", "ab"), c("abc", "ab"), dup=TRUE)
+##Compare with
+charmatch(c("", "ab", "ab"), c("abc", "ab"))
+
+##ambiguous targets
+charmatch(c("", "ab", "ab"), c("abc", "ab", "ab"))
+pmatch(c("", "ab", "ab"), c("abc", "ab", "ab"), dup=FALSE)
+pmatch(c("", "ab", "ab"), c("abc", "ab", "ab"), dup=TRUE)
+
+## print versus cat
+x <- c("abc", "dsef\n", "g")
+print(x)
+cat(x)
+
+## more examples of cat, and other functions
+d <- date()
+cat("Today's date is:", substring(d, 1, 10),
+    substring(d, 21, 24), "\n")
+ cat(1, 2, 3, 4, 5, 6, fill = 7, labels = letters)
+##format command
+format(pi, width=12, nsmall=6)
+format(c(pi, pi*pi, pi^3))
+format(signif(c(pi, pi * pi, pi^3), digits=3))
+format(signif(c(pi, pi * pi, pi^3)), digits=3)
+
+##sprintf also a possibility
+##modifying strings
+x <- "My string 123"
+chartr("yis", "abC", x)
+chartr("r-tM", "A-Cw", x)
+tolower(x)
+toupper(x)
+##regular expressions
+x <- "My pattern string 32144"
+##to demonstrate the matches
+gregexpr("n.", x) #. matches any character
+gregexpr("[1-3]", x) #[1-3] matches any 1, 2  or 3
+gregexpr("n\\>", x) # only consider matches at end of a word
+gregexpr("\\<p", x) # only consider matches at end of a word
+gregexpr("t{2}", x)  #only matches occurrences of 2 t's
+##to demonstrate the behaviour of the different functions
+grep("pa", c(x, tolower(x))) ## match in each element
+grep("pa", c(x, toupper(x))) ## match in first element
+grep("pa", c(x, toupper(x)), value=TRUE) # return values of element that matches
+grepl("pa", c(x, toupper(x))) ## match in first element
+
+regexpr("pa", c(x, toupper(x))) #match in first
+regexpr("n", c(x, toupper(x))) #match in first
+gregexpr("n", c(x, toupper(x))) ##  two matches in first string
+##replacement in strings
+ x <- "My pattern string 12344"
+
+sub("PA", "pa", c(x, toupper(x)))
+
+sub("n.", "ZZ", c(x, toupper(x))) ## only changes first match
+
+gsub("n.", "XX", c(x, toupper(x))) ## changes both occurrences
+
+###botanical database
+
+###data
+mycomments <- c("Salpichroa sp?, Cotopaxi NP, Ecuador",
+             "Monnina sp, Cotopaxi NP, Ecuador",
+             "Baccharis latifolia, Cotopaxi NP, Ecuador",
+               "Calceolaria sp, Cotopaxi NP, Ecuador")
+Genus1 <- data.frame(genus=c(" ","Baccharis","Calceolaria"),
+                     family=c("Not_Known","Asteraceae","Calceolariaceae"),
+                    stringsAsFactors=FALSE)
+
+###extract the botanical name
+botname <- ifelse(regexpr(",", mycomments) > -1,
+                 substring(mycomments, 1, regexpr(",", mycomments) - 1),
+                 mycomments)
+###or
+mybotnamelist <- strsplit(mycomments, ",")
+mybotnamelist[c(1, 2)]
+sapply(mybotnamelist[c(1, 2)], "[", 1)
+botname <- sapply(mybotnamelist,"[", 1)
+botname
+###extract the genus (first part of name)
+genus <- substring(botname, 1, regexpr(" ", botname) - 1)
+genus
+###create a data.frame of genera
+genusdf <-  data.frame(genus=unique(genus), stringsAsFactors=FALSE)
+###merge with the previous version, Genus (has family field too)
+Genusall <- merge(Genus1, genusdf, all=TRUE)
+Genusall
+###outside R, fill in the families for the new genera, then read in again
+### new data frame Genus
+Genus2 <- data.frame(genus=c(" ", "Baccharis", "Calceolaria", "Monnina",
+                    "Salpichroa"),
+                     family=c("Not_Known", "Asteraceae", "Calceolariaceae",
+                     "Polygalaceae", "Solanaceae"),
+                   stringsAsFactors=FALSE )
+###find the family for the new photos
+Family <- Genus2[,2][match(genus, Genus2[,1], nomatch=1)]
+cbind(genus, Family)
+
+```
+
+
+Attribute
+http://portal.stats.ox.ac.uk/userdata/ruth/APTS2013/  
+http://computationalfinance.lsi.upc.edu/?page_id=28 
+```{r}
+############################
+## R programming session 8
+############################
+
+##attributes
+
+library(MASS)
+lh ### a time series object
+
+attributes(lh)
+
+attr(lh, "tsp")
+
+attr(lh, "ownership") <- "mine"
+
+attributes(lh)
+
+
+## generic functions
+
+methods(summary)
+
+methods(class="lm")
+
+mylm <- lm(weight ~ feed, data=chickwts)
+
+summary(mylm)
+
+summary(chickwts)
+
+##summary.aov, summary.lm:
+
+op <- options(contrasts=c("contr.helmert", "contr.poly"))
+
+npk.aov <- aov(yield ~ block + N * P * K, npk)
+summary(npk.aov)
+summary.lm(npk.aov)
+
+options(op)# restore to previous
+
+## s4 slots
+library(Matrix)
+(I3 <- Matrix(diag(3)))# identity, i.e., unit "diagonalMatrix"
+class(I3)
+str(I3)
+getSlots("ddiMatrix")
+slotNames(I3)
+I3@Dim
+
+myFn <- function(x, ...) UseMethod("myFn")
+myFn.default <- function(x, ...)
+              print("in myFn.default")
+myFn("test")
+
+myFn.character <- function(x, ...)
+{
+    print(x)
+    NextMethod(x)
+    print(c(x, 2))
+}
+myFn("test")
+
+## search paths, conflicts
+search()
+conflicts()
+conflicts(detail=TRUE)
+## finding things
+
+find("lh")
+exists("lh")
+
+## local copies
+
+lm <- lm
+conflicts()
+
+##evaluation environments
+
+f1 <- function()
+{
+    print(x)
+}
+f2 <- function()
+{
+   x <- 2
+   f1()
+}
+
+f2()  ## gives error - exactly what depends on whether Matrix is loaded.
+
+## functions with environments
+s <- 5; x <- 6
+f <- function()
+{
+    ## define function g: prints s and x,
+    ## returns NULL
+    ## will get environment from f
+    g <- function()
+    {
+        cat("g: s=", s, "x=", x, "\n")
+    }
+    ## define function j which:
+    ## 1) defines function k,
+    ## 2) creates s with value 1,
+    ## 3) returns result of running k
+    j <- function()
+    {
+        ## define function k which returns a
+        ## function with an environment
+        ## containing s with value 1
+        k <- function()
+        {
+            function() cat("anon in k: s=",
+                           s, "x=", x, "\n")
+        }
+        s <- 1
+        k()
+    }
+    ## create s and x in the environment of f
+    ## (and g and j)
+    s <- 3
+    x <- 4
+    cat("run j:\n")
+    print(j())
+    cat("\nrun return val of j:\n")
+    j()()
+    cat("result of running g:\n")
+    g()
+}
+
+f()
+## want to see the boxcox function (need MASS here)
+boxcox
+## not very helpful
+methods(boxcox)
+## non-visible
+getAnywhere(boxcox.lm)
+MASS:::boxcox.lm
+
+##returning values from functions
+
+a <- NULL
+a$start <- 1
+myfn <- function(x)
+{
+    x$start <- 2
+    return(x)
+}
+(a <- myfn(a))
+
+```
+
+https://rpubs.com/ktmud/ggplot2  
+
+
+    manufacturer - car manufacturer
+    model - car model
+    displ - engine displacement, in litres
+    year - year of manufacture
+    cyl - number of cylinders
+    trans - type of transmission
+    drv - f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+    cty - city miles per gallon
+    hwy - highway miles per gallon
+    fl - fuel type
+    class - “type” of car
+
+
+
+```{r}
+library(ggplot2)
+p <- ggplot(data=mpg, aes(displ, hwy))
+p
+```
+
+```{r}
+p <- ggplot(data=mpg, aes(x=displ, y=hwy))
+p + geom_point()
+```
+
+
+
+Essential Grammatical Elements
+
+    data - data being plotted (R data frame)
+    aesthetics - visual characteristics that represent data
+    geoms - geometric objects representing the data
+
+All Grammatical Elements
+
+    data - data being plotted (R data frame)
+    aesthetics - visual characteristics that represent data
+    geoms - geometric objects representing the
+    scales - how visual characteristics are converted to display values
+    stats - statistical transformations summarizing data
+    coordinate system - space used for projecting data
+    facets - describes data splits in subsets displayed as multiple graphs
+    themes - all non-data ink
+
+
+Add color aesthetics (type of a class)
+
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(color=class))
+```
+
+Add color aesthetics (number of cylinders) - continuous  
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(color=cyl))
+```
+
+Add color aesthetics (number of cylinders) - discrete using a factor  
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(color=factor(cyl)))
+```
+
+Add size aesthetics (number of cylinders)  
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(size=cyl))
+```
+
+Add size aesthetics 
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(color=class, size=cyl))
+```
+
+Add shape aesthetics 
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(aes(shape=factor(cyl)), size=4)
+```
+
+Add more shape aesthetics 
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(colour="black", size=4.5) +
+  geom_point(colour="white", size=4) +
+  geom_point(aes(shape = factor(cyl)))
+```
+
+Show the pimped shapes in legend  
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point(colour="black", size=4.5, show.legend=T) +
+  geom_point(colour="white", size=4, show.legend=T) +
+  geom_point(aes(shape = factor(cyl)))
+```
+
+https://github.com/clayford?tab=repositories  
+List of aesthetics
+
+    x
+    y
+    color
+    fill
+    size
+    alpha
+    linetype
+    labels
+
+Geoms
+
+```{r}
+p <- ggplot(mpg, aes(x=displ, y=hwy))
+p + geom_point() + geom_line()
+```
+https://rpubs.com/ktmud/ggplot2 
+https://github.com/anhnguyendepocen/IntroEDA_Rggplot2  
+https://rpubs.com/JanpuHou/326048 
+https://web.stanford.edu/class/stats366/Gibbs.html 
+http://rstudio-pubs-static.s3.amazonaws.com/279858_010f9da7c8d744988019397e3fe51cb2.html  
+http://www.est.uc3m.es/icascos/eng/simulation_notes/mcmc-techniques.html  
+https://fabiandablander.com/r/Spike-and-Slab.html 

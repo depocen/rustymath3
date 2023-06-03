@@ -1,9 +1,9 @@
 --- 
-title: "Math Prefresher for Political Scientists"
-author: ""
+title: "Mathemathics and Statistics Bootcamp for Econonomics and Social Sciences  "
+author: "Nguyen Ngoc Anh"
 date: "`r format(Sys.Date(), '%B %Y')`"
-description: "Text for Harvard Department of Government Math Prefresher"
-github-repo: "IQSS/prefresher"
+description: "Text modelled on for Harvard Department of Government Math Prefresher"
+github-repo: "Rusty Math 3 "
 site: "bookdown::bookdown_site"
 documentclass: book
 geometry: "margin=1.5in"
@@ -11,24 +11,40 @@ biblio-style: apalike
 link-citations: yes
 cover-image: "./images/logo.png"
 ---
+
 # About this Booklet {-}
 
-The [__Harvard Gov Prefresher__](https://projects.iq.harvard.edu/prefresher) is held each year in August. All relevant information is on our website, including the day-to-day schedule. The 2020 Prefresher instructors are [Laura Royden](https://gov.harvard.edu/people/laura-royden) and [Hunter Rendleman](https://hunterrendleman.com), and the faculty sponsor is  [Gary King](https://gking.harvard.edu).
+[Gary King](https://gking.harvard.edu).
+https://github.com/uvastatlab/phdplus2021  
+This booklet serves as the text for self-learning to be updated continuously.   
 
-This booklet serves as the text for the Prefresher, available as a [webpage](https://iqss.github.io/prefresher/) updated automatically and as a [printable PDF](https://github.com/IQSS/prefresher/releases) updated manually. It is the product of generations of Prefresher instructors. See below for a full list of instructors and contributors. 
+Why use R for this purpose? It would be more natural to use symbolic math software, such as *Mathematica* [@Wolfram2003] or *Maple* [@Liengme2019], but (1) this software is expensive, and although there are free, open-source alternatives, they are not, in my experience, as easy to use;^[But check out the free *Wolfram Alpha* website at <\url{https://www.wolframalpha.com/}>. You can enter commands in the same "Wolfram" language used by *Mathematica* as well as "natural-language" queries. For example, the expressions `D[4x^3 + 12x^2 - 3x - 2, x]` and `differentiate 4x^3 + 12x^2 - 3x - 2` evaluate $\frac{d}{dx}(4x^3 + 12x^2 - 3x - 2)$---and simplify the resulting function, graph it, find its roots, and more.]   (2) R has excellent linear algebra and graphics capabilities, along with a full range of statistical distributions; (3) readers can also use R for statistical data analysis---which is its principal purpose---and may already be familiar with it; (4) R is free, open-source software, and is simple to use for the computations performed in the text; (5) finally, I used R to produce almost all of the graphs in the text.
 
-For information about the role of the prefresher (or "math camp") as a introduction to graduate school, you  may also be interested in ["The Math Prefresher and The Collective Future of Political Science Graduate Training"](https://gking.harvard.edu/prefresher), in _PS: Political Science & Politics_, by Gary King, Shiro Kuriwaki, and Yon Soo Park.
+In addition to the basic R distribution, this document uses several add-on packages that, like R itself, are freely available from the *Comprehensive R Archive Network (CRAN)* at <\url{https://cran.r-project.org/}>: **car** [@FoxWeisberg2019], **matlib** [@FriendlyFoxChalmers2020], **mosaicCalc** [@KaplanPruimHorton2020], **mvtnorm** [@GenzEtAl2020], and **RcmdrMisc** [@Fox2020a]. These packages can be installed via the R command `install.packages(c("car", "matlib", "mosaicCalc", "mvtnorm", "RcmdrMisc))`.
+
+This document assumes some familiarity with R. For the basics, see the manual *An Introduction to R*, which is distributed with R and is also available in various formats on the CRAN website. For a more extensive introduction to R in the context of applied regression analysis, see @FoxWeisberg2019. 
+
+This supplement to the *Math Primer** is available both in PDF format and as an *R Markdown* document (`R-supplement.Rmd`), which can be conveniently edited and compiled in the *RStudio* interactive development environment for R [see, in particular, @XieAllaireGrolemund2019]. *RStudio* is free, open-source (though commercially developed) software, available along with extensive documentation at <\url{https://rstudio.com/products/rstudio/}>. The R commands in the document are also in a stand-alone R script (`R-supplement.R`).
+
+### Python codes fragment 
+
+From time to time, `Python code` will also be presented to faciliate my own learning.
+
+https://juejung.github.io/jdocs/Comp/html/Slides_Root.html 
+
+http://web.vu.lt/mif/a.buteikis/wp-content/uploads/PE_Book/5-2-BinaryResponse.html?
+
+https://www.ncachanosky.com/macro_python/ 
 
 
 ### Authors and Contributors {-}
 
-- Past Authors and Instructors:  Curt Signorino 1996-1997; Ken Scheve 1997-1998; Eric Dickson 1998-2000; Orit Kedar 1999; James Fowler 2000-2001; Kosuke Imai 2001-2002; Jacob Kline 2002; Dan Epstein 2003; Ben Ansell 2003-2004; Ryan Moore 2004-2005; Mike Kellermann 2005-2006; Ellie Powell 2006-2007; Jen Katkin 2007-2008; Patrick Lam 2008-2009; Viridiana Rios 2009-2010; Jennifer Pan 2010-2011; Konstantin Kashin 2011-2012; Soledad Prillaman 2013; Stephen Pettigrew 2013-2014; Anton Strezhnev 2014-2015; Mayya Komisarchik 2015-2016; Connor Jerzak 2016-2017; Shiro Kuriwaki 2017-2018; Yon Soo Park 2018; Meg Schwenzfeier (2019); Shannon Parker (2019).
-- Repository Maintainer: Shiro Kuriwaki ([kuriwaki](https://github.com/kuriwaki))
-- Contributors: Thanks to Juan Dodyk ([juandodyk](https://github.com/juandodyk)), Hunter Rendleman ([hrendleman](https://github.com/hrendleman)), and Tyler Simko ([tylersimko](https://github.com/tylersimko)) for contributing to the booklet for corrections and improvements as students.
+https://tikzit.github.io/   
+https://www.gmihalache.com/computation/  
+https://www.gsb.stanford.edu/faculty-research/faculty/conferences/big-data-initiative-international-macro-finance/videos-codes 
+
 
 
 ### Contributing {-}
 
-We transitioned the booklet into a bookdown [github repository](https://github.com/IQSS/prefresher) in 2018.  As we update this version, we appreciate any bug reports or fixes appreciated. 
 
-All changes should be made in the `.Rmd` files in the project root. Changes pushed to the repository will be checked for compilation by Travis-CI. To contribute a change, please make a pull request and set the repository maintainer as the reviewer.
